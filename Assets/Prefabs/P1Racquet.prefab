@@ -718,7 +718,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0.1740005, z: 0}
   m_UseSpring: 1
   m_Spring:
-    spring: 10
+    spring: 50
     damper: 10
     targetPosition: 1
   m_UseMotor: 0
@@ -752,7 +752,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0.11799967, z: 0}
   m_UseSpring: 1
   m_Spring:
-    spring: 10
+    spring: 50
     damper: 4
     targetPosition: 1
   m_UseMotor: 0
@@ -786,7 +786,7 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0, y: 0.14999987, z: 0}
   m_UseSpring: 1
   m_Spring:
-    spring: 10
+    spring: 50
     damper: 2
     targetPosition: 1
   m_UseMotor: 0
@@ -867,7 +867,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   racCon: {fileID: 114670620670810882}
-  hitForce: 10
+  hitForce: 20
   velocityX: 0
   velocityY: 0
 --- !u!114 &114153700824724072
@@ -897,7 +897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   racCon: {fileID: 114670620670810882}
-  hitForce: 10
+  hitForce: 20
   velocityX: 0
   velocityY: 0
 --- !u!114 &114670620670810882

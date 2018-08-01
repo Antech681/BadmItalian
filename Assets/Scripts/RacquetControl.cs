@@ -11,6 +11,7 @@ public enum WhichPlayer
 public class RacquetControl : MonoBehaviour {
 
     public WhichPlayer whichPlayer;
+    private Rigidbody rb;
 
     public float moveSpeed;
     public bool canMove = true;
@@ -22,6 +23,7 @@ public class RacquetControl : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        rb = GetComponent<Rigidbody>();
 		switch (whichPlayer)
         {
             case WhichPlayer.P1:
@@ -44,6 +46,7 @@ public class RacquetControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        rb.velocity = Vector3.zero;
 		if (canMove)
         {
             if (Input.GetKey(moveLeft))
@@ -53,14 +56,6 @@ public class RacquetControl : MonoBehaviour {
             if (Input.GetKey(moveRight))
             {
                 transform.position += new Vector3(moveSpeed * Time.deltaTime, 0, 0);
-            }
-            if (Input.GetKeyDown(hitLeft))
-            {
-                
-            }
-            if (Input.GetKeyDown(hitRight))
-            {
-
             }
         }
 	}

@@ -23,12 +23,12 @@ public class SwingingScript : MonoBehaviour {
 		if (Input.GetKeyDown(racCon.hitLeft))
         {
             //rb.AddForce(new Vector3(-hitForce, 0, 0), ForceMode.VelocityChange);
-            rb.velocity = new Vector3(-hitForce, velocityY);
+            rb.velocity = new Vector3(-hitForce, 0);
         }
         if (Input.GetKeyDown(racCon.hitRight))
         {
             //rb.AddForce(new Vector3(hitForce, 0, 0), ForceMode.VelocityChange);
-            rb.velocity = new Vector3(hitForce, velocityY);
+            rb.velocity = new Vector3(hitForce, 0);
         }
     }
 }
