@@ -50,6 +50,10 @@ public class RacquetControl : MonoBehaviour {
             {
                 transform.position += new Vector3(-moveSpeed * Time.deltaTime, 0, 0);
             }
+            if (Input.GetKey(moveRight))
+            {
+                transform.position += new Vector3(moveSpeed * Time.deltaTime, 0, 0);
+            }
         }
 	}
 }
