@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114422205193851010}
   m_Layer: 0
   m_Name: Meatball
-  m_TagString: Untagged
+  m_TagString: Meatball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,6 +122,7 @@ MonoBehaviour:
   startingPosition: {x: 0, y: 2, z: 0}
   serveStrength: 5
   timer: 3
+  splatter: {fileID: 198748598591516900, guid: b2753b007c3243e4b9fc2746a758f850, type: 2}
 --- !u!135 &135633659553876304
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -6,6 +6,7 @@ public class Goal : MonoBehaviour {
 
     public int score;
     public Meatball meatball;
+    public ParticleSystem splatter;
 
 	// Use this for initialization
 	void Start () {
@@ -21,6 +22,7 @@ public class Goal : MonoBehaviour {
         if (other.tag == "Meatball")
         {
             score++;
+            //Instantiate(splatter, other.gameObject.transform);
             Destroy(other.gameObject);
             Invoke("InstantiateMeatball", 2);
         }

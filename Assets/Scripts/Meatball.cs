@@ -21,8 +21,10 @@ public class Meatball : MonoBehaviour {
 
     public float timer;
 
-	// Use this for initialization
-	void Awake () {
+    public ParticleSystem splatter;
+
+    // Use this for initialization
+    void Awake () {
         rb = GetComponent<Rigidbody>();
         serving = true;
         addedForce = 4.5f;
@@ -72,6 +74,14 @@ public class Meatball : MonoBehaviour {
             rb.useGravity = false;
             rb.isKinematic = true;
             Invoke("LaunchBall", 2);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Finish")
+        {
+            Instantiate(splatter, other.gameObject.transform);
         }
     }
 
