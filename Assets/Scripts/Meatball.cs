@@ -13,6 +13,8 @@ public class Meatball : MonoBehaviour {
     public float velocityY;
     public float addedForce;
 
+    public int scoreWorth;
+
     public Vector3 startingPosition;
     float[] serveHorizontal = new float[2] { -10, 10 };
     public float serveStrength;
@@ -20,7 +22,7 @@ public class Meatball : MonoBehaviour {
     public float timer;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
         rb = GetComponent<Rigidbody>();
         serving = true;
         addedForce = 4.5f;
@@ -64,10 +66,18 @@ public class Meatball : MonoBehaviour {
         {
             rb.velocity = new Vector3(velocityX - addedForce, impactForce, 0);
         }
+        if (collision.gameObject.tag == "Respawn")
+        {
+            rb.velocity = Vector3.zero;
+            rb.useGravity = false;
+            rb.isKinematic = true;
+            Invoke("LaunchBall", 2);
+        }
     }
 
     public void LaunchBall()
     {
+        transform.position = startingPosition;
         serving = false;
         rb.useGravity = true;
         rb.isKinematic = false;
