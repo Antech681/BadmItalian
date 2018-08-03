@@ -1,8 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Meatball : MonoBehaviour {
+
+    public GameplayManager gameManager;
 
     public bool serving;
 
@@ -28,6 +31,8 @@ public class Meatball : MonoBehaviour {
         rb = GetComponent<Rigidbody>();
         serving = true;
         addedForce = 4.5f;
+        gameManager = FindObjectOfType<GameplayManager>();
+        gameManager.InstTimer();
 	}
 	
 	// Update is called once per frame

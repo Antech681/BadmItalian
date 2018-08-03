@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 872184d9b7ba04f4b9cfc5899344e2b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   serving: 0
   impactForce: 10
   vel: {x: 0, y: 0, z: 0}

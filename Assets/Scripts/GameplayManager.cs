@@ -10,14 +10,16 @@ public class GameplayManager : MonoBehaviour {
 
     public Text p1ScoreText;
     public Text p2ScoreText;
+    private string p1ScoreString;
+    private string p2ScoreString;
 
-    public int p1Score;
-    public int p2Score;
+    private int p1Score;
+    private int p2Score;
 
-    public string currentWinner;
+    public ServeTimer serveTimer;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -26,19 +28,15 @@ public class GameplayManager : MonoBehaviour {
         p1Score = rightGoal.score;
         p2Score = leftGoal.score;
 
-        //p1ScoreText = p1ScoreString;
+        p1ScoreString = p1Score.ToString();
+        p2ScoreString = p2Score.ToString();
 
-        if (p1Score == p2Score)
-        {
-            currentWinner = "It's a Draw";
-        }
-        else if (p1Score > p2Score)
-        {
-            currentWinner = "Player 1 (Left)";
-        }
-        else if (p1Score < p2Score)
-        {
-            currentWinner = "Player 2 (Right)";
-        }
+        p1ScoreText.text = p1ScoreString;
+        p2ScoreText.text = p2ScoreString;
+    }
+
+    public void InstTimer()
+    {
+        serveTimer.StartCountdown();
     }
 }
