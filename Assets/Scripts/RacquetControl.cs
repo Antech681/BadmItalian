@@ -29,8 +29,8 @@ public class RacquetControl : MonoBehaviour {
             case WhichPlayer.P1:
                 moveLeft = KeyCode.A;
                 moveRight = KeyCode.D;
-                hitLeft = KeyCode.Q;
-                hitRight = KeyCode.E;
+                hitLeft = KeyCode.V;
+                hitRight = KeyCode.B;
 
                 break;
 
