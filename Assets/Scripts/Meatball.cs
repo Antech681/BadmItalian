@@ -63,6 +63,19 @@ public class Meatball : MonoBehaviour {
         {
             rb.velocity = new Vector3(velocityX, impactForce, 0);
         }
+
+        if (scoreWorth == 1)
+        {
+            //Sprite 1
+        }
+        else if (scoreWorth == 2)
+        {
+            //Sprite 2
+        }
+        else if (scoreWorth == 3)
+        {
+            //Sprite 3
+        }
 	}
 
     private void OnCollisionEnter(Collision collision)
