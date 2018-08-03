@@ -16,6 +16,7 @@ public class Meatball : MonoBehaviour {
     public float velocityY;
     public float addedForce;
 
+    public int meatball; // ADDED CODE HERE!!!!!!!!!!!!!!!!!!!!
     public int scoreWorth;
 
     public Vector3 startingPosition;
@@ -33,7 +34,8 @@ public class Meatball : MonoBehaviour {
         addedForce = 4.5f;
         gameManager = FindObjectOfType<GameplayManager>();
         gameManager.InstTimer();
-	}
+        ChooseBall(); // ADDED CODE HERE!!!!!!!!!!!!!!!!!!!!
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -98,5 +100,23 @@ public class Meatball : MonoBehaviour {
         rb.isKinematic = false;
         rb.velocity = Vector3.zero;
         rb.velocity = new Vector3(serveHorizontal[Random.Range(0, 2)], serveStrength, 0);
+    }
+
+    // ADDED CODE HERE!!!!!!!!!!!!!!!!!!!!
+    public void ChooseBall()
+    {
+        meatball = Random.Range(1, 10);
+        if (meatball < 6)
+        {
+            scoreWorth = 1;
+        }
+        else if (meatball > 5 && meatball < 9)
+        {
+            scoreWorth = 2;
+        }
+        else if (meatball > 8)
+        {
+            scoreWorth = 3;
+        }
     }
 }

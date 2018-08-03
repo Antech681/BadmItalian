@@ -8,21 +8,31 @@ public class Goal : MonoBehaviour {
     public Meatball meatball;
     public ParticleSystem splatter;
 
+    // ADDED CODE HERE!!!!!!!!!!!!!!!!!!!!
+    private Meatball meatballInPlay;
+    public int howMuchToScore;
+
 	// Use this for initialization
 	void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    // ADDED CODE HERE!!!!!!!!!!!!!!!!!!!!
+    void Update () {
+        meatballInPlay = FindObjectOfType<Meatball>();
+        if (meatballInPlay == null)
+        {
+            return;
+        }
+        howMuchToScore = meatballInPlay.scoreWorth;
 	}
 
     private void OnTriggerEnter (Collider other)
     {
         if (other.tag == "Meatball")
         {
-            score++;
-            //Instantiate(splatter, other.gameObject.transform);
+            score += howMuchToScore; // ADDED CODE HERE!!!!!!!!!!!!!!!!!!!!
             Destroy(other.gameObject);
             Invoke("InstantiateMeatball", 2);
         }
