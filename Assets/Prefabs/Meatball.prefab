@@ -119,6 +119,7 @@ MonoBehaviour:
   velocityX: 0
   velocityY: 0
   addedForce: 5
+  meatball: 0
   scoreWorth: 1
   startingPosition: {x: 0, y: 2, z: 0}
   serveStrength: 5

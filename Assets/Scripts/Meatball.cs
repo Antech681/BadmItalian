@@ -30,51 +30,51 @@ public class Meatball : MonoBehaviour {
     // Use this for initialization
     void Awake () {
         rb = GetComponent<Rigidbody>();
-        serving = true;
-        addedForce = 4.5f;
         gameManager = FindObjectOfType<GameplayManager>();
-        gameManager.InstTimer();
-        ChooseBall(); // ADDED CODE HERE!!!!!!!!!!!!!!!!!!!!
+        if (gameManager.gameOn)
+        {
+            serving = true;
+            addedForce = 4.5f;
+            gameManager.InstTimer();
+            ChooseBall(); // ADDED CODE HERE!!!!!!!!!!!!!!!!!!!!
+        }
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (serving == true)
+        if (gameManager.gameOn)
         {
-            rb.useGravity = false;
-            rb.isKinematic = true;
-            transform.position = startingPosition;
-
-            timer -= Time.deltaTime;
-
-            if (timer <= 0)
+            if (serving == true)
             {
-                LaunchBall();
+                rb.useGravity = false;
+                rb.isKinematic = true;
+                transform.position = startingPosition;
+
+                timer -= Time.deltaTime;
+
+                if (timer <= 0)
+                {
+                    LaunchBall();
+                }
             }
-        }
 
-        vel = rb.velocity;
-        //rb.velocity = vel;
+            //vel = rb.velocity;
 
-        velocityX = rb.velocity.x;
-        addedForce += 0.001f;
+            velocityX = rb.velocity.x;
+            addedForce += 0.001f;
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            rb.velocity = new Vector3(velocityX, impactForce, 0);
-        }
-
-        if (scoreWorth == 1)
-        {
-            //Sprite 1
-        }
-        else if (scoreWorth == 2)
-        {
-            //Sprite 2
-        }
-        else if (scoreWorth == 3)
-        {
-            //Sprite 3
+            if (scoreWorth == 1)
+            {
+                //Sprite 1
+            }
+            else if (scoreWorth == 2)
+            {
+                //Sprite 2
+            }
+            else if (scoreWorth == 3)
+            {
+                //Sprite 3
+            }
         }
 	}
 
@@ -122,14 +122,17 @@ public class Meatball : MonoBehaviour {
         if (meatball < 6)
         {
             scoreWorth = 1;
+            Debug.Log("ONE");
         }
         else if (meatball > 5 && meatball < 9)
         {
             scoreWorth = 2;
+            Debug.Log("TWO");
         }
         else if (meatball > 8)
         {
             scoreWorth = 3;
+            Debug.Log("THREE");
         }
     }
 }

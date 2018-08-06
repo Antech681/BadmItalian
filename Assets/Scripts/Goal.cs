@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Goal : MonoBehaviour {
-
+    
     public int score;
     public Meatball meatball;
     public ParticleSystem splatter;
+    public GameplayManager gameManager;
 
     // ADDED CODE HERE!!!!!!!!!!!!!!!!!!!!
     private Meatball meatballInPlay;
@@ -33,13 +34,20 @@ public class Goal : MonoBehaviour {
         if (other.tag == "Meatball")
         {
             score += howMuchToScore; // ADDED CODE HERE!!!!!!!!!!!!!!!!!!!!
+            gameManager.Invoke("CheckScore", 0.1f);
             Destroy(other.gameObject);
-            Invoke("InstantiateMeatball", 2);
+            if (gameManager.gameOn)
+            {
+                Invoke("InstantiateMeatball", 2);
+            }
         }
     }
 
     private void InstantiateMeatball()
     {
-        Instantiate(meatball);
+        if (gameManager.gameOn)
+        {
+            Instantiate(meatball);
+        }
     }
 }
