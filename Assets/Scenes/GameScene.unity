@@ -346,7 +346,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &469526308
 GameObject:
@@ -750,6 +750,7 @@ MonoBehaviour:
   score: 0
   meatball: {fileID: 114422205193851010, guid: 4576174229933f4498fe350611baec28, type: 2}
   splatter: {fileID: 198748598591516900, guid: b2753b007c3243e4b9fc2746a758f850, type: 2}
+  gameManager: {fileID: 1270653094}
   howMuchToScore: 0
 --- !u!65 &853930816
 BoxCollider:
@@ -805,48 +806,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 853930813}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &1069855974
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4285376319459484, guid: 4576174229933f4498fe350611baec28, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4285376319459484, guid: 4576174229933f4498fe350611baec28, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4285376319459484, guid: 4576174229933f4498fe350611baec28, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4285376319459484, guid: 4576174229933f4498fe350611baec28, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4285376319459484, guid: 4576174229933f4498fe350611baec28, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4285376319459484, guid: 4576174229933f4498fe350611baec28, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4285376319459484, guid: 4576174229933f4498fe350611baec28, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4285376319459484, guid: 4576174229933f4498fe350611baec28, type: 2}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 4576174229933f4498fe350611baec28, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1109439500
 GameObject:
   m_ObjectHideFlags: 0
@@ -1129,11 +1088,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd640de0a1fdf9640959958ff7eede37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meatball: {fileID: 114422205193851010, guid: 4576174229933f4498fe350611baec28, type: 2}
   leftGoal: {fileID: 1830044563}
   rightGoal: {fileID: 853930815}
   p1ScoreText: {fileID: 1109439502}
   p2ScoreText: {fileID: 1421161910}
   serveTimer: {fileID: 1635579892}
+  scoreCap: 4
+  p1RoundScore: 0
+  p2RoundScore: 0
+  roundCap: 2
+  gameOn: 0
 --- !u!4 &1270653095
 Transform:
   m_ObjectHideFlags: 0
@@ -1836,6 +1801,7 @@ MonoBehaviour:
   score: 0
   meatball: {fileID: 114422205193851010, guid: 4576174229933f4498fe350611baec28, type: 2}
   splatter: {fileID: 198748598591516900, guid: b2753b007c3243e4b9fc2746a758f850, type: 2}
+  gameManager: {fileID: 1270653094}
   howMuchToScore: 0
 --- !u!1 &1969900958
 GameObject:

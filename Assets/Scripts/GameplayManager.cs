@@ -45,6 +45,12 @@ public class GameplayManager : MonoBehaviour {
 
             p1ScoreText.text = p1ScoreString;
             p2ScoreText.text = p2ScoreString;
+
+            if (p1RoundScore == roundCap || p2RoundScore == roundCap)
+            {
+                EndGame();
+                gameOn = false;
+            }
         }
     }
 
@@ -62,16 +68,10 @@ public class GameplayManager : MonoBehaviour {
         {
             Invoke("RoundRestart", 1f);
         }
-        if (p1RoundScore == roundCap || p2RoundScore == roundCap)
-        {
-            EndGame();
-            gameOn = false;
-        }
     }
 
     public void RoundRestart()
     {
-        Debug.Log("BADA BING");
         if (p1Score > p2Score)
         {
             p1RoundScore += 1;
@@ -82,11 +82,11 @@ public class GameplayManager : MonoBehaviour {
         }
         rightGoal.score = 0;
         leftGoal.score = 0;
-        Debug.Log("BADA BOOM");
     }
 
     public void EndGame()
     {
         Debug.Log("End Game");
+        //Insert endgame code here
     }
 }
