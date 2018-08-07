@@ -4,6 +4,22 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class GameplayManager : MonoBehaviour {
+    
+    public GameObject pot1;
+    public GameObject pot2;
+
+    public Sprite dirty01;
+    public Sprite dirty02;
+    public Sprite dirty03;
+    public Sprite dirty04;
+    public Sprite dirty05;
+    public Sprite dirty06;
+    public Sprite otherDirty01;
+    public Sprite otherDirty02;
+    public Sprite otherDirty03;
+    public Sprite otherDirty04;
+    public Sprite otherDirty05;
+    public Sprite otherDirty06;
 
     public Meatball meatball;
 
@@ -27,11 +43,18 @@ public class GameplayManager : MonoBehaviour {
 
     public bool gameOn;
 
+<<<<<<< Updated upstream
     // Use this for initialization
     void Start () {
         gameOn = true;
         Instantiate(meatball);
     }
+=======
+	// Use this for initialization
+	void Start () {
+
+	}
+>>>>>>> Stashed changes
 	
 	// Update is called once per frame
 	void Update () {
@@ -80,6 +103,7 @@ public class GameplayManager : MonoBehaviour {
         {
             p2RoundScore += 1;
         }
+<<<<<<< Updated upstream
         rightGoal.score = 0;
         leftGoal.score = 0;
     }
@@ -88,5 +112,55 @@ public class GameplayManager : MonoBehaviour {
     {
         Debug.Log("End Game");
         //Insert endgame code here
+=======
+        if (p2Score == 1)
+        {
+            pot1.GetComponent<SpriteRenderer>().sprite = dirty01;
+        }
+        if (p2Score == 2)
+        {
+            pot1.GetComponent<SpriteRenderer>().sprite = dirty02;
+        }
+        if (p2Score == 3)
+        {
+            pot1.GetComponent<SpriteRenderer>().sprite = dirty03;
+        }
+        if (p2Score == 4)
+        {
+            pot1.GetComponent<SpriteRenderer>().sprite = dirty04;
+        }
+        if (p2Score == 5)
+        {
+            pot1.GetComponent<SpriteRenderer>().sprite = dirty05;
+        }
+        if (p2Score == 6)
+        {
+            pot1.GetComponent<SpriteRenderer>().sprite = dirty06;
+        }
+        if (p1Score == 1)
+        {
+            pot2.GetComponent<SpriteRenderer>().sprite = otherDirty01;
+        }
+        if (p1Score == 2)
+        {
+            pot2.GetComponent<SpriteRenderer>().sprite = otherDirty02;
+        }
+        if (p1Score == 3)
+        {
+            pot2.GetComponent<SpriteRenderer>().sprite = otherDirty03;
+        }
+        if (p1Score == 4)
+        {
+            pot2.GetComponent<SpriteRenderer>().sprite = otherDirty04;
+        }
+        if (p1Score == 5)
+        {
+            pot2.GetComponent<SpriteRenderer>().sprite = otherDirty05;
+        }
+        if (p1Score == 6)
+        {
+            pot2.GetComponent<SpriteRenderer>().sprite = otherDirty06;
+        }
+>>>>>>> Stashed changes
     }
 }
