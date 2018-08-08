@@ -7,7 +7,6 @@ public class Goal : MonoBehaviour {
     public int score;
     public Meatball meatball;
     public ParticleSystem splatter;
-<<<<<<< Updated upstream
     public GameplayManager gameManager;
 
     // ADDED CODE HERE!!!!!!!!!!!!!!!!!!!!
@@ -24,6 +23,7 @@ public class Goal : MonoBehaviour {
             return;
         }
         howMuchToScore = meatballInPlay.scoreWorth;
+    }
     
     public RectTransform playerBar;
     public float maxDirty;
@@ -36,23 +36,11 @@ public class Goal : MonoBehaviour {
         playerBar.sizeDelta = new Vector2(currentDirty, playerBar.sizeDelta.y);
         dirty = maxDirty / 6;
     }
-	
-	// Update is called once per frame
-	void Update () {
-	}
-
-    // Use this for initialization
-    void Start () {
-        maxDirty = playerBar.sizeDelta.x;
-        playerBar.sizeDelta = new Vector2(currentDirty, playerBar.sizeDelta.y);
-        dirty = maxDirty / 6;
-    }
 
     private void OnTriggerEnter (Collider other)
     {
         if (other.tag == "Meatball")
         {
-<<<<<<< Updated upstream
             score += howMuchToScore; // ADDED CODE HERE!!!!!!!!!!!!!!!!!!!!
             gameManager.Invoke("CheckScore", 0.1f);
             score++;

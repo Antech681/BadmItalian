@@ -48,12 +48,6 @@ public class GameplayManager : MonoBehaviour {
         gameOn = true;
         Instantiate(meatball);
     }
-=======
-	// Use this for initialization
-	void Start () {
-
-	}
->>>>>>> Stashed changes
 	
 	// Update is called once per frame
 	void Update () {
@@ -102,7 +96,6 @@ public class GameplayManager : MonoBehaviour {
         {
             p2RoundScore += 1;
         }
-<<<<<<< Updated upstream
         rightGoal.score = 0;
         leftGoal.score = 0;
     }
