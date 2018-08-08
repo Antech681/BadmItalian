@@ -33,7 +33,6 @@ public class Meatball : MonoBehaviour {
     // Use this for initialization
     void Awake () {
         rb = GetComponent<Rigidbody>();
-<<<<<<< Updated upstream
         gameManager = FindObjectOfType<GameplayManager>();
         if (gameManager.gameOn)
         {
@@ -42,11 +41,9 @@ public class Meatball : MonoBehaviour {
             gameManager.InstTimer();
             ChooseBall(); // ADDED CODE HERE!!!!!!!!!!!!!!!!!!!!
         }
-=======
         serving = true;
         addedForce = 4.5f;
         sprite = GetComponent<SpriteRenderer>();       
->>>>>>> Stashed changes
     }
 	
 	// Update is called once per frame
@@ -69,7 +66,6 @@ public class Meatball : MonoBehaviour {
 
             //vel = rb.velocity;
 
-<<<<<<< Updated upstream
             velocityX = rb.velocity.x;
             addedForce += 0.001f;
 
@@ -86,10 +82,8 @@ public class Meatball : MonoBehaviour {
                 //Sprite 3
             }
         }
-=======
         velocityX = rb.velocity.x;
         addedForce += 0.001f;
->>>>>>> Stashed changes
 	}
 
     private void OnCollisionEnter(Collision collision)

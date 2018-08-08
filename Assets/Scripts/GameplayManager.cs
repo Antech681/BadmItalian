@@ -42,8 +42,7 @@ public class GameplayManager : MonoBehaviour {
     public int roundCap;
 
     public bool gameOn;
-
-<<<<<<< Updated upstream
+    
     // Use this for initialization
     void Start () {
         gameOn = true;
@@ -112,7 +111,6 @@ public class GameplayManager : MonoBehaviour {
     {
         Debug.Log("End Game");
         //Insert endgame code here
-=======
         if (p2Score == 1)
         {
             pot1.GetComponent<SpriteRenderer>().sprite = dirty01;
@@ -161,6 +159,5 @@ public class GameplayManager : MonoBehaviour {
         {
             pot2.GetComponent<SpriteRenderer>().sprite = otherDirty06;
         }
->>>>>>> Stashed changes
     }
 }
