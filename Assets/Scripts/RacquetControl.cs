@@ -21,6 +21,9 @@ public class RacquetControl : MonoBehaviour {
     public KeyCode hitLeft;
     public KeyCode hitRight;
 
+    public float posXMin;
+    public float posXMax;
+
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody>();
@@ -51,12 +54,18 @@ public class RacquetControl : MonoBehaviour {
         {
             if (Input.GetKey(moveLeft))
             {
-                transform.position += new Vector3(-moveSpeed * Time.deltaTime, 0, 0);
+                if (transform.position.x >= posXMin)
+                {
+                    transform.position += new Vector3(-moveSpeed * Time.deltaTime, 0, 0);
+                }
             }
             if (Input.GetKey(moveRight))
             {
-                transform.position += new Vector3(moveSpeed * Time.deltaTime, 0, 0);
+                if (transform.position.x <= posXMax)
+                {
+                    transform.position += new Vector3(moveSpeed * Time.deltaTime, 0, 0);
+                }
             }
         }
-	}
+    }
 }
