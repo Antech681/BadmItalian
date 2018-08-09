@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 198748598591516900}
   - component: {fileID: 199997644847603450}
   - component: {fileID: 82662695476065334}
+  - component: {fileID: 114559457715445670}
   m_Layer: 0
   m_Name: Splatter_PrtSys
   m_TagString: Untagged
@@ -137,6 +138,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &114559457715445670
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1069934022377624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e41b478e34b12c540ba3975b9c0c9a17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &198748598591516900
 ParticleSystem:
   m_ObjectHideFlags: 1
