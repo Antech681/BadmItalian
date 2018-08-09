@@ -84,27 +84,7 @@ public class GameplayManager : MonoBehaviour {
         {
             Invoke("RoundRestart", 1f);
         }
-    }
-
-    public void RoundRestart()
-    {
-        if (p1Score > p2Score)
-        {
-            p1RoundScore += 1;
-        }
-        else if (p1Score < p2Score)
-        {
-            p2RoundScore += 1;
-        }
-        rightGoal.score = 0;
-        leftGoal.score = 0;
-    }
-
-    public void EndGame()
-    {
-        Debug.Log("End Game");
-        //Insert endgame code here
-        if (p2Score == 1)
+        /*if (p2Score == 1)
         {
             pot1.GetComponent<SpriteRenderer>().sprite = dirty01;
         }
@@ -151,6 +131,26 @@ public class GameplayManager : MonoBehaviour {
         if (p1Score == 6)
         {
             pot2.GetComponent<SpriteRenderer>().sprite = otherDirty06;
+        }*/
+    }
+
+    public void RoundRestart()
+    {
+        if (p1Score > p2Score)
+        {
+            p1RoundScore += 1;
         }
+        else if (p1Score < p2Score)
+        {
+            p2RoundScore += 1;
+        }
+        rightGoal.score = 0;
+        leftGoal.score = 0;
+    }
+
+    public void EndGame()
+    {
+        Debug.Log("End Game");
+        //Insert endgame code here
     }
 }

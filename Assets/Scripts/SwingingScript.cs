@@ -12,11 +12,14 @@ public class SwingingScript : MonoBehaviour {
     public float velocityX;
     public float velocityY;
 
+    private SFXManager sfxMan;
+
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody>();
         velocityY = rb.velocity.y;
-	}
+        sfxMan = FindObjectOfType<SFXManager>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -24,11 +27,13 @@ public class SwingingScript : MonoBehaviour {
         {
             //rb.AddForce(new Vector3(-hitForce, 0, 0), ForceMode.VelocityChange);
             rb.velocity = new Vector3(-hitForce, 0);
+            sfxMan.racquetSwing.Play();
         }
         if (Input.GetKeyDown(racCon.hitRight))
         {
             //rb.AddForce(new Vector3(hitForce, 0, 0), ForceMode.VelocityChange);
             rb.velocity = new Vector3(hitForce, 0);
+            sfxMan.racquetSwing.Play();
         }
     }
 }
