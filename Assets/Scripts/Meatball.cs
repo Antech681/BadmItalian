@@ -29,11 +29,13 @@ public class Meatball : MonoBehaviour {
 
     public int sortingOrder = 0;
     private SpriteRenderer sprite;
+    private SFXManager sfxMan;
 
     // Use this for initialization
     void Awake () {
         rb = GetComponent<Rigidbody>();
         gameManager = FindObjectOfType<GameplayManager>();
+        sfxMan = FindObjectOfType<SFXManager>();
         if (gameManager.gameOn)
         {
             serving = true;
@@ -91,10 +93,12 @@ public class Meatball : MonoBehaviour {
         if (collision.gameObject.tag == "Player1")
         {
             rb.velocity = new Vector3(velocityX + addedForce, impactForce, 0);
+            sfxMan.racquetImpact.Play();
         }
         if (collision.gameObject.tag == "Player2")
         {
             rb.velocity = new Vector3(velocityX - addedForce, impactForce, 0);
+            sfxMan.racquetImpact.Play();
         }
         if (collision.gameObject.tag == "Respawn")
         {

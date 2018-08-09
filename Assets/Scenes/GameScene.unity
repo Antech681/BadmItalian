@@ -122,6 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 88262975}
   - component: {fileID: 88262976}
+  - component: {fileID: 88262977}
   m_Layer: 0
   m_Name: Swoosh
   m_TagString: Untagged
@@ -237,6 +238,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &88262977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 88262974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86d56a3f94db00444ad83026aff30b01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultAudio: 1
 --- !u!1 &101105192
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,7 +514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vcObjects: []
   maxVolumeLevel: 1
-  currentVolumeLevel: 0.45
+  currentVolumeLevel: 1
 --- !u!1 &334481309
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,7 +909,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f12925bde93797b4ca7ed700e505ba8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newTrack: 1
+  newTrack: 2
   switchOnStart: 1
 --- !u!1 &726103777
 GameObject:
@@ -1095,6 +1108,21 @@ Prefab:
         type: 2}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 59929479765454116, guid: 73efc0807fcbd734b8b1333edce030d0,
+        type: 2}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114670620670810882, guid: 73efc0807fcbd734b8b1333edce030d0,
+        type: 2}
+      propertyPath: posXMin
+      value: -13
+      objectReference: {fileID: 0}
+    - target: {fileID: 114670620670810882, guid: 73efc0807fcbd734b8b1333edce030d0,
+        type: 2}
+      propertyPath: posXMax
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 73efc0807fcbd734b8b1333edce030d0, type: 2}
@@ -1411,7 +1439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86d56a3f94db00444ad83026aff30b01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultAudio: 1
+  defaultAudio: 0.5
 --- !u!1 &962597003
 GameObject:
   m_ObjectHideFlags: 0
@@ -1893,6 +1921,16 @@ Prefab:
         type: 2}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114734452003892064, guid: 54fe0b151134fed42bd209c1cc7fad21,
+        type: 2}
+      propertyPath: posXMin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114734452003892064, guid: 54fe0b151134fed42bd209c1cc7fad21,
+        type: 2}
+      propertyPath: posXMax
+      value: 12.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 54fe0b151134fed42bd209c1cc7fad21, type: 2}
@@ -2609,7 +2647,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1728255866}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 86d56a3f94db00444ad83026aff30b01, type: 3}
   m_Name: 
@@ -2793,6 +2831,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1920116669}
   - component: {fileID: 1920116670}
+  - component: {fileID: 1920116671}
   m_Layer: 0
   m_Name: Impact
   m_TagString: Untagged
@@ -2908,6 +2947,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1920116671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1920116668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86d56a3f94db00444ad83026aff30b01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultAudio: 1
 --- !u!1 &1969900958
 GameObject:
   m_ObjectHideFlags: 0
