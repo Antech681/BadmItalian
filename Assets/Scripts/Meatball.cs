@@ -105,6 +105,7 @@ public class Meatball : MonoBehaviour {
             rb.velocity = Vector3.zero;
             rb.useGravity = false;
             rb.isKinematic = true;
+            sfxMan.failSplat.Play();
             Invoke("LaunchBall", 2);
         }
     }
