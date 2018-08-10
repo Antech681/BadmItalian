@@ -94,15 +94,16 @@ public class Meatball : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
+        sfxMan.racquetImpact.pitch = 0.5f;
         if (collision.gameObject.tag == "Player1")
         {
             rb.velocity = new Vector3(velocityX + addedForce, impactForce, 0);
-            sfxMan.racquetImpact.Play();
+            sfxMan.racquetImpact.pitch = 1f;
         }
         if (collision.gameObject.tag == "Player2")
         {
             rb.velocity = new Vector3(velocityX - addedForce, impactForce, 0);
-            sfxMan.racquetImpact.Play();
+            sfxMan.racquetImpact.pitch = 1f;
         }
         if (collision.gameObject.tag == "Respawn")
         {
@@ -111,8 +112,10 @@ public class Meatball : MonoBehaviour {
             rb.isKinematic = true;
             sfxMan.failSplat.Play();
             emisMod.rateOverTime = 0;
+            sfxMan.racquetImpact.pitch = 0.5f;
             Invoke("LaunchBall", 2);
         }
+        sfxMan.racquetImpact.Play();
     }
 
     private void OnTriggerEnter(Collider other)
