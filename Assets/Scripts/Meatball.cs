@@ -112,7 +112,10 @@ public class Meatball : MonoBehaviour {
             emisMod.rateOverTime = 0;
             Invoke("LaunchBall", 2);
         }
-        sfxMan.racquetImpact.Play();
+        if (!rb.isKinematic)
+        {
+            sfxMan.racquetImpact.Play();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
