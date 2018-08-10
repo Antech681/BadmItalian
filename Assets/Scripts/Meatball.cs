@@ -122,6 +122,7 @@ public class Meatball : MonoBehaviour {
             sortingOrder = 0;
             sprite.sortingOrder = sortingOrder;
             Instantiate(splatter, other.gameObject.transform.position, Quaternion.Euler(-90, 0, 0));
+            sfxMan.scoreSploosh.Play();
         }
     }
 

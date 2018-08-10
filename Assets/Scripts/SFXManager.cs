@@ -7,6 +7,7 @@ public class SFXManager : MonoBehaviour {
     public AudioSource racquetImpact;
     public AudioSource racquetSwing;
     public AudioSource failSplat;
+    public AudioSource scoreSploosh;
 
     private static bool sfxManExists;
 
