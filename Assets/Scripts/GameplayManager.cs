@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class GameplayManager : MonoBehaviour {
-    
+
+    private SFXManager sfxMan;
+
     public GameObject pot1;
     public GameObject pot2;
 
@@ -47,6 +49,7 @@ public class GameplayManager : MonoBehaviour {
     void Start () {
         gameOn = true;
         Instantiate(meatball);
+        sfxMan = FindObjectOfType<SFXManager>();
     }
 	
 	// Update is called once per frame
@@ -82,7 +85,8 @@ public class GameplayManager : MonoBehaviour {
     {
         if (p1Score >= scoreCap || p2Score >= scoreCap)
         {
-            Invoke("RoundRestart", 1f);
+            sfxMan.roundVictory.Play();
+            Invoke("RoundRestart", 2f);
         }
         /*if (p2Score == 1)
         {
