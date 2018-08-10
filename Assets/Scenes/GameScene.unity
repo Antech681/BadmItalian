@@ -514,7 +514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vcObjects: []
   maxVolumeLevel: 1
-  currentVolumeLevel: 1
+  currentVolumeLevel: 0
 --- !u!1 &334481309
 GameObject:
   m_ObjectHideFlags: 0
@@ -1796,7 +1796,7 @@ MonoBehaviour:
   p1ScoreText: {fileID: 1109439502}
   p2ScoreText: {fileID: 1421161910}
   serveTimer: {fileID: 1635579892}
-  scoreCap: 4
+  scoreCap: 6
   p1RoundScore: 0
   p2RoundScore: 0
   roundCap: 2

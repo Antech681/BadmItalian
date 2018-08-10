@@ -30,12 +30,16 @@ public class Meatball : MonoBehaviour {
     public int sortingOrder = 0;
     private SpriteRenderer sprite;
     private SFXManager sfxMan;
+    private ParticleSystem partSys;
+    private ParticleSystem.EmissionModule emisMod;
 
     // Use this for initialization
     void Awake () {
         rb = GetComponent<Rigidbody>();
         gameManager = FindObjectOfType<GameplayManager>();
         sfxMan = FindObjectOfType<SFXManager>();
+        partSys = GetComponentInChildren<ParticleSystem>();
+        emisMod = partSys.emission;
         if (gameManager.gameOn)
         {
             serving = true;
@@ -106,6 +110,7 @@ public class Meatball : MonoBehaviour {
             rb.useGravity = false;
             rb.isKinematic = true;
             sfxMan.failSplat.Play();
+            emisMod.rateOverTime = 0;
             Invoke("LaunchBall", 2);
         }
     }
@@ -130,6 +135,7 @@ public class Meatball : MonoBehaviour {
         rb.isKinematic = false;
         rb.velocity = Vector3.zero;
         rb.velocity = new Vector3(serveHorizontal[Random.Range(0, 2)], serveStrength, 0);
+        emisMod.rateOverTime = 5;
     }
 
     // ADDED CODE HERE!!!!!!!!!!!!!!!!!!!!
