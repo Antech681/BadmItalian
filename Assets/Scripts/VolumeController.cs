@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class VolumeController : MonoBehaviour {
-
+    
     private AudioSource theAudio;
     private float audioLevel;
     public float defaultAudio;
@@ -11,7 +11,7 @@ public class VolumeController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         theAudio = GetComponent<AudioSource>();
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
