@@ -20,7 +20,6 @@ public class Meatball : MonoBehaviour {
     public int scoreWorth;
 
     public Vector3 startingPosition;
-    float[] serveHorizontal = new float[2] { -10, 10 };
     public float serveStrength;
 
     public float timer;
@@ -138,7 +137,7 @@ public class Meatball : MonoBehaviour {
         rb.useGravity = true;
         rb.isKinematic = false;
         rb.velocity = Vector3.zero;
-        rb.velocity = new Vector3(serveHorizontal[Random.Range(0, 2)], serveStrength, 0);
+        rb.velocity = new Vector3(gameManager.whichDirection, serveStrength, 0);
         emisMod.rateOverTime = 5;
     }
 

@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class GameplayManager : MonoBehaviour {
 
+    public static GameplayManager GM;
+    
     private SFXManager sfxMan;
 
     public GameObject pot1;
@@ -45,11 +47,15 @@ public class GameplayManager : MonoBehaviour {
 
     public bool gameOn;
     
+    public float[] serveHorizontal = new float[2] { -10, 10 };
+    public float whichDirection;
+
     // Use this for initialization
     void Start () {
         gameOn = true;
         Instantiate(meatball);
         sfxMan = FindObjectOfType<SFXManager>();
+        whichDirection = serveHorizontal[Random.Range(0, 2)];
     }
 	
 	// Update is called once per frame
