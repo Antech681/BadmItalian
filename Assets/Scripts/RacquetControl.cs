@@ -52,20 +52,45 @@ public class RacquetControl : MonoBehaviour {
         rb.velocity = Vector3.zero;
 		if (canMove)
         {
-            if (Input.GetKey(moveLeft))
+            switch (whichPlayer)
             {
-                if (transform.position.x >= posXMin)
-                {
-                    transform.position += new Vector3(-moveSpeed * Time.deltaTime, 0, 0);
-                }
+                case WhichPlayer.P1:
+                    if (Input.GetKey(GameplayManager.GM.p1Left))
+                    {
+                        if (transform.position.x >= posXMin)
+                        {
+                            transform.position += new Vector3(-moveSpeed * Time.deltaTime, 0, 0);
+                        }
+                    }
+                    if (Input.GetKey(GameplayManager.GM.p1Right))
+                    {
+                        if (transform.position.x <= posXMax)
+                        {
+                            transform.position += new Vector3(moveSpeed * Time.deltaTime, 0, 0);
+                        }
+                    }
+
+                    break;
+
+                case WhichPlayer.P2:
+                    if (Input.GetKey(GameplayManager.GM.p2Left))
+                    {
+                        if (transform.position.x >= posXMin)
+                        {
+                            transform.position += new Vector3(-moveSpeed * Time.deltaTime, 0, 0);
+                        }
+                    }
+                    if (Input.GetKey(GameplayManager.GM.p2Right))
+                    {
+                        if (transform.position.x <= posXMax)
+                        {
+                            transform.position += new Vector3(moveSpeed * Time.deltaTime, 0, 0);
+                        }
+                    }
+
+                    break;
             }
-            if (Input.GetKey(moveRight))
-            {
-                if (transform.position.x <= posXMax)
-                {
-                    transform.position += new Vector3(moveSpeed * Time.deltaTime, 0, 0);
-                }
-            }
+            
         }
     }
 }

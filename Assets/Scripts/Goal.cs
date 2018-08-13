@@ -2,8 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum WhichGoal
+{
+    LeftGoal,
+    RightGoal
+}
+
 public class Goal : MonoBehaviour {
-    
+
+    public WhichGoal whichGoal;
+
     public int score;
     public Meatball meatball;
     public ParticleSystem splatter;
@@ -46,6 +54,16 @@ public class Goal : MonoBehaviour {
             //playerBar.sizeDelta = new Vector2(playerBar.sizeDelta.x + dirty, playerBar.sizeDelta.y);
             //Instantiate(splatter, other.gameObject.transform);
             Destroy(other.gameObject);
+            switch (whichGoal)
+            {
+                case WhichGoal.LeftGoal:
+                    gameManager.whichDirection = gameManager.serveHorizontal[1];
+                    break;
+
+                case WhichGoal.RightGoal:
+                    gameManager.whichDirection = gameManager.serveHorizontal[0];
+                    break;
+            }
             if (gameManager.gameOn)
             {
                 Invoke("InstantiateMeatball", 2);
