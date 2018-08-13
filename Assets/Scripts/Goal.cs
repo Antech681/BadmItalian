@@ -58,10 +58,12 @@ public class Goal : MonoBehaviour {
             {
                 case WhichGoal.LeftGoal:
                     gameManager.whichDirection = gameManager.serveHorizontal[1];
+                    gameManager.serveTo = 2;
                     break;
 
                 case WhichGoal.RightGoal:
                     gameManager.whichDirection = gameManager.serveHorizontal[0];
+                    gameManager.serveTo = 1;
                     break;
             }
             if (gameManager.gameOn)

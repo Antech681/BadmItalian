@@ -32,6 +32,8 @@ public class Meatball : MonoBehaviour {
     private ParticleSystem partSys;
     private ParticleSystem.EmissionModule emisMod;
 
+    private LadleServe ladle;
+
     // Use this for initialization
     void Awake () {
         rb = GetComponent<Rigidbody>();
@@ -39,6 +41,7 @@ public class Meatball : MonoBehaviour {
         sfxMan = FindObjectOfType<SFXManager>();
         partSys = GetComponentInChildren<ParticleSystem>();
         emisMod = partSys.emission;
+        ladle = FindObjectOfType<LadleServe>();
         if (gameManager.gameOn)
         {
             serving = true;
@@ -65,7 +68,8 @@ public class Meatball : MonoBehaviour {
 
                 if (timer <= 0)
                 {
-                    LaunchBall();
+                    //LaunchBall();
+                    ladle.serving = true;
                 }
             }
 
@@ -125,6 +129,13 @@ public class Meatball : MonoBehaviour {
             sprite.sortingOrder = sortingOrder;
             Instantiate(splatter, other.gameObject.transform.position, Quaternion.Euler(-90, 0, 0));
             sfxMan.scoreSploosh.Play();
+        }
+
+        if (other.tag == "Ladle")
+        {
+            LaunchBall();
+            ladle.serving = false;
+            //other.isTrigger = false;
         }
     }
 

@@ -49,6 +49,7 @@ public class GameplayManager : MonoBehaviour {
 
     public float[] serveHorizontal = new float[2] { -10, 10 };
     public float whichDirection;
+    public int serveTo;
 
     public KeyCode p1Left { get; set; }
     public KeyCode p1Right { get; set; }
@@ -83,10 +84,20 @@ public class GameplayManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        int startDirection;
         gameOn = true;
         Instantiate(meatball);
         sfxMan = FindObjectOfType<SFXManager>();
-        whichDirection = serveHorizontal[Random.Range(0, 2)];
+        startDirection = Random.Range(0, 2);
+        whichDirection = serveHorizontal[startDirection];
+        if (startDirection == 0)
+        {
+            serveTo = 1;
+        }
+        else if (startDirection <= 1)
+        {
+            serveTo = 2;
+        }
     }
 	
 	// Update is called once per frame
