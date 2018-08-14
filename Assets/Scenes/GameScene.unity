@@ -1294,6 +1294,7 @@ GameObject:
   - component: {fileID: 1265023370}
   - component: {fileID: 1265023369}
   - component: {fileID: 1265023368}
+  - component: {fileID: 1265023373}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -1337,7 +1338,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1265023367}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1387,6 +1388,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!114 &1265023373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1265023367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87ab52c87acb1f748b14d8773bb2596c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serveTo: 0
+  serving: 0
 --- !u!1 &1270653093
 GameObject:
   m_ObjectHideFlags: 0
@@ -1443,6 +1457,7 @@ MonoBehaviour:
   - -10
   - 10
   whichDirection: 0
+  serveTo: 0
 --- !u!4 &1270653095
 Transform:
   m_ObjectHideFlags: 0
@@ -2093,7 +2108,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1794407271}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -2407,6 +2422,10 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 512534894}
+    - target: {fileID: 1001095557928870, guid: a09f02e78f9bf284d8522f1ee6c6e645, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a09f02e78f9bf284d8522f1ee6c6e645, type: 2}
   m_IsPrefabParent: 0

@@ -14,7 +14,7 @@ public class ControlMenuScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        menuPanel = transform.FindChild("Panel");
+        menuPanel = transform.Find("Panel");
         menuPanel.gameObject.SetActive(false);
         waitingForKey = false;
 
@@ -60,9 +60,11 @@ public class ControlMenuScript : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.Escape) && !menuPanel.gameObject.activeSelf)
         {
             menuPanel.gameObject.SetActive(true);
+            Time.timeScale = 0f;
         } else if (Input.GetKeyDown(KeyCode.Escape) && menuPanel.gameObject.activeSelf)
         {
             menuPanel.gameObject.SetActive(false);
+            Time.timeScale = 1f;
         }
     }
 
