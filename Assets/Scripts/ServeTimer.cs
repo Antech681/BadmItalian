@@ -8,9 +8,10 @@ public class ServeTimer : MonoBehaviour {
     public float time = 3;
     private string timeString;
     public Text timerText;
+    public GameObject timerText2;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
         //StartCoroutine(TheFinalCountDown()); // Don't worry about the coroutine, it didn't work out.
 	}
@@ -19,11 +20,12 @@ public class ServeTimer : MonoBehaviour {
     void Update() {
         time -= Time.deltaTime;
         timeString = Mathf.CeilToInt(time).ToString();
-        timerText.text = timeString;
+        timerText.text = "00:0" + timeString;
 
         if (time < 0)
         {
             GetComponent<Text>().enabled = false;
+            timerText2.SetActive(true);
         }
 	}
 
@@ -31,28 +33,6 @@ public class ServeTimer : MonoBehaviour {
     {
         time = 3;
         GetComponent<Text>().enabled = true;
+        timerText2.SetActive(false);
     }
-
-    /*IEnumerator TheFinalCountDown()
-    {
-        while (time > -1)
-        {
-            yield return new WaitForSeconds(1);
-            time -= 1;
-
-            print(time);
-            timerText.text = time.ToString();
-
-            if (time == 0)
-            {
-                //do thing that launches ball (Static vars)
-                print("Ball In Play");
-            }
-
-
-        }
-        print("DONE");
-
-        Destroy(gameObject);
-    }*/
 }

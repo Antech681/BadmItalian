@@ -12,12 +12,14 @@ public class GameplayManager : MonoBehaviour {
     public GameObject pot1;
     public GameObject pot2;
 
+    public Sprite dirty00;
     public Sprite dirty01;
     public Sprite dirty02;
     public Sprite dirty03;
     public Sprite dirty04;
     public Sprite dirty05;
     public Sprite dirty06;
+    public Sprite otherDirty00;
     public Sprite otherDirty01;
     public Sprite otherDirty02;
     public Sprite otherDirty03;
@@ -43,6 +45,10 @@ public class GameplayManager : MonoBehaviour {
     public int scoreCap;
     public int p1RoundScore;
     public int p2RoundScore;
+    public string p1RoundPoints;
+    public string p2RoundPoints;
+    public Text p1RoundText;
+    public Text p2RoundText;
     public int roundCap;
 
     public bool gameOn;
@@ -99,8 +105,8 @@ public class GameplayManager : MonoBehaviour {
             p1ScoreString = p1Score.ToString();
             p2ScoreString = p2Score.ToString();
 
-            p1ScoreText.text = p1ScoreString;
-            p2ScoreText.text = p2ScoreString;
+            //p1ScoreText.text = p1ScoreString;
+            //p2ScoreText.text = p2ScoreString;
 
             if (p1RoundScore == roundCap || p2RoundScore == roundCap)
             {
@@ -125,7 +131,7 @@ public class GameplayManager : MonoBehaviour {
             sfxMan.roundVictory.Play();
             Invoke("RoundRestart", 2f);
         }
-        /*if (p2Score == 1)
+        if (p2Score == 1)
         {
             pot1.GetComponent<SpriteRenderer>().sprite = dirty01;
         }
@@ -172,7 +178,7 @@ public class GameplayManager : MonoBehaviour {
         if (p1Score == 6)
         {
             pot2.GetComponent<SpriteRenderer>().sprite = otherDirty06;
-        }*/
+        }
     }
 
     public void RoundRestart()
@@ -180,13 +186,19 @@ public class GameplayManager : MonoBehaviour {
         if (p1Score > p2Score)
         {
             p1RoundScore += 1;
+            p1RoundPoints = p1RoundScore.ToString();
+            p1RoundText.text = p1RoundPoints;
         }
         else if (p1Score < p2Score)
         {
             p2RoundScore += 1;
+            p2RoundPoints = p2RoundScore.ToString();
+            p2RoundText.text = p2RoundPoints;
         }
         rightGoal.score = 0;
         leftGoal.score = 0;
+        pot1.GetComponent<SpriteRenderer>().sprite = dirty00;
+        pot2.GetComponent<SpriteRenderer>().sprite = otherDirty00;
     }
 
     public void EndGame()

@@ -14,7 +14,7 @@ public class ControlMenuScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        menuPanel = transform.FindChild("Panel");
+        menuPanel = transform.Find("Panel");
         menuPanel.gameObject.SetActive(false);
         waitingForKey = false;
 
