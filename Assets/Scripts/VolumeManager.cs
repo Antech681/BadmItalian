@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class VolumeManager : MonoBehaviour {
 
@@ -8,11 +9,19 @@ public class VolumeManager : MonoBehaviour {
     public float maxVolumeLevel = 1.0f;
     public float currentVolumeLevel;
 
+    public Slider volumeSlider;
+    private Text volumeText;
+
 	// Use this for initialization
 	void Start () {
         vcObjects = FindObjectsOfType<VolumeController>();
 
-        
+        if (volumeSlider == null)
+        {
+            return;
+        }
+
+        volumeText = volumeSlider.GetComponentInChildren<Text>();
 	}
 	
 	// Update is called once per frame
@@ -30,5 +39,8 @@ public class VolumeManager : MonoBehaviour {
         {
             vcObjects[i].SetAudioLevel(currentVolumeLevel);
         }
+
+        currentVolumeLevel = volumeSlider.value;
+        volumeText.text = Mathf.RoundToInt(volumeSlider.value * 100) + "%";
     }
 }
