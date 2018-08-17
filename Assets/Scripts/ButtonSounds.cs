@@ -19,7 +19,7 @@ public class ButtonSounds : MonoBehaviour {
 
     public void PlayClickSound()
     {
-        sfxMan.buttonHover.pitch = Random.Range(0.8f, 1.2f);
-        sfxMan.buttonHover.Play();
+        sfxMan.buttonClick.pitch = Random.Range(0.8f, 1.2f);
+        sfxMan.buttonClick.Play();
     }
 }
