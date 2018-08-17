@@ -9,6 +9,9 @@ public class GameplayManager : MonoBehaviour {
     
     private SFXManager sfxMan;
 
+    private RoundStars roundStars1;
+    private RoundStars roundStars2;
+
     public GameObject pot1;
     public GameObject pot2;
 
@@ -88,6 +91,8 @@ public class GameplayManager : MonoBehaviour {
         gameOn = true;
         Instantiate(meatball);
         sfxMan = FindObjectOfType<SFXManager>();
+        roundStars1 = GameObject.Find("P1StarCount").GetComponent<RoundStars>();
+        roundStars2 = GameObject.Find("P2StarCount").GetComponent<RoundStars>();
         startDirection = Random.Range(0, 2);
         whichDirection = serveHorizontal[startDirection];
         if (startDirection == 0)
@@ -134,6 +139,16 @@ public class GameplayManager : MonoBehaviour {
         if (p1Score >= scoreCap || p2Score >= scoreCap)
         {
             sfxMan.roundVictory.Play();
+            if (p1Score > p2Score)
+            {
+                p1RoundScore += 1;
+            }
+            else if (p1Score < p2Score)
+            {
+                p2RoundScore += 1;
+            }
+            roundStars1.Invoke("UpdateStars", 0f);
+            roundStars2.Invoke("UpdateStars", 0f);
             Invoke("RoundRestart", 2f);
         }
         /*if (p2Score == 1)
@@ -188,14 +203,6 @@ public class GameplayManager : MonoBehaviour {
 
     public void RoundRestart()
     {
-        if (p1Score > p2Score)
-        {
-            p1RoundScore += 1;
-        }
-        else if (p1Score < p2Score)
-        {
-            p2RoundScore += 1;
-        }
         rightGoal.score = 0;
         leftGoal.score = 0;
     }
