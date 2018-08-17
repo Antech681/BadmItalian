@@ -9,6 +9,8 @@ public class SFXManager : MonoBehaviour {
     public AudioSource failSplat;
     public AudioSource scoreSploosh;
     public AudioSource roundVictory;
+    public AudioSource ladleSwing;
+    public AudioSource buttonHover;
 
     private static bool sfxManExists;
 
