@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum WhichPlayerSwinging
 {
@@ -15,18 +16,34 @@ public class SwingingScript : MonoBehaviour {
     public RacquetControl racCon;
     private Rigidbody rb;
 
+    public float startHitForce;
     public float hitForce;
+    public float hitForceChargeRate;
+    public float hitForceMax;
 
     public float velocityX;
     public float velocityY;
 
+
     private SFXManager sfxMan;
+
+    private Slider powerSlider;
 
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody>();
         velocityY = rb.velocity.y;
         sfxMan = FindObjectOfType<SFXManager>();
+        switch (whichPlayer)
+        {
+            case WhichPlayerSwinging.P1:
+                powerSlider = GameObject.Find("P1PowerCharge").GetComponent<Slider>();
+                break;
+
+            case WhichPlayerSwinging.P2:
+                powerSlider = GameObject.Find("P2PowerCharge").GetComponent<Slider>();
+                break;
+        }
     }
 	
 	// Update is called once per frame
@@ -34,33 +51,76 @@ public class SwingingScript : MonoBehaviour {
         switch (whichPlayer)
         {
             case WhichPlayerSwinging.P1:
-                if (Input.GetKeyDown(GameplayManager.GM.p1SwingL))
+                if (hitForce >= hitForceMax)
                 {
-                    //rb.AddForce(new Vector3(-hitForce, 0, 0), ForceMode.VelocityChange);
-                    rb.velocity = new Vector3(-hitForce, 0);
-                    sfxMan.racquetSwing.Play();
+                    hitForce = hitForceMax;
                 }
-                if (Input.GetKeyDown(GameplayManager.GM.p1SwingR))
+                powerSlider.value = hitForce;
+                if (Input.GetKey(GameplayManager.GM.p1SwingL))
                 {
-                    //rb.AddForce(new Vector3(hitForce, 0, 0), ForceMode.VelocityChange);
-                    rb.velocity = new Vector3(hitForce, 0);
+                    hitForce += hitForceChargeRate * Time.deltaTime;
+                }
+                if (Input.GetKey(GameplayManager.GM.p1SwingR))
+                {
+                    hitForce += hitForceChargeRate * Time.deltaTime;
+                }
+                if (Input.GetKeyUp(GameplayManager.GM.p1SwingL))
+                {
+                    if (transform.localPosition.y <= 0)
+                    {
+                        rb.velocity = new Vector3(-hitForce, 0);
+                    }
+                    else if (transform.localPosition.y >= 0)
+                    {
+                        rb.velocity = new Vector3(hitForce, 0);
+                    }
+
                     sfxMan.racquetSwing.Play();
+                    hitForce = startHitForce;
+                }
+                if (Input.GetKeyUp(GameplayManager.GM.p1SwingR))
+                {
+                    if (transform.localPosition.y <= 0)
+                    {
+                        rb.velocity = new Vector3(hitForce, 0);
+                    }
+                    else if (transform.localPosition.y >= 0)
+                    {
+                        rb.velocity = new Vector3(-hitForce, 0);
+                    }
+                    sfxMan.racquetSwing.Play();
+                    hitForce = startHitForce;
                 }
 
                 break;
 
             case WhichPlayerSwinging.P2:
-                if (Input.GetKeyDown(GameplayManager.GM.p2SwingL))
+                if (hitForce >= hitForceMax)
+                {
+                    hitForce = hitForceMax;
+                }
+                powerSlider.value = hitForce;
+                if (Input.GetKey(GameplayManager.GM.p2SwingL))
+                {
+                    hitForce += hitForceChargeRate * Time.deltaTime;
+                }
+                if (Input.GetKey(GameplayManager.GM.p2SwingR))
+                {
+                    hitForce += hitForceChargeRate * Time.deltaTime;
+                }
+                if (Input.GetKeyUp(GameplayManager.GM.p2SwingL))
                 {
                     //rb.AddForce(new Vector3(-hitForce, 0, 0), ForceMode.VelocityChange);
                     rb.velocity = new Vector3(-hitForce, 0);
                     sfxMan.racquetSwing.Play();
+                    hitForce = startHitForce;
                 }
-                if (Input.GetKeyDown(GameplayManager.GM.p2SwingR))
+                if (Input.GetKeyUp(GameplayManager.GM.p2SwingR))
                 {
                     //rb.AddForce(new Vector3(hitForce, 0, 0), ForceMode.VelocityChange);
                     rb.velocity = new Vector3(hitForce, 0);
                     sfxMan.racquetSwing.Play();
+                    hitForce = startHitForce;
                 }
 
                 break;
