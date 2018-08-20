@@ -12,6 +12,7 @@ public class SFXManager : MonoBehaviour {
     public AudioSource ladleSwing;
     public AudioSource buttonClick;
     public AudioSource buttonHover;
+    public AudioSource dramaticVS;
 
     private static bool sfxManExists;
 
