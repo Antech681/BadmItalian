@@ -27,7 +27,7 @@ public class RacquetControl : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody>();
-		switch (whichPlayer)
+		/*switch (whichPlayer)
         {
             case WhichPlayer.P1:
                 moveLeft = KeyCode.A;
@@ -44,7 +44,7 @@ public class RacquetControl : MonoBehaviour {
                 hitRight = KeyCode.Period;
 
                 break;
-        }
+        }*/
 	}
 	
 	// Update is called once per frame

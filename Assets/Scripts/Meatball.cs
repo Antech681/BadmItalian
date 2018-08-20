@@ -15,9 +15,14 @@ public class Meatball : MonoBehaviour {
     public float velocityX;
     public float velocityY;
     public float addedForce;
+    
+    public Sprite meatball1;
+    public Sprite meatball2;
+    public Sprite meatball3;
 
     public int meatball; // ADDED CODE HERE!!!!!!!!!!!!!!!!!!!!
     public int scoreWorth;
+    public static int meatballWorth;
 
     public Vector3 startingPosition;
     public float serveStrength;
@@ -51,7 +56,8 @@ public class Meatball : MonoBehaviour {
         }
         serving = true;
         addedForce = 4.5f;
-        sprite = GetComponent<SpriteRenderer>();       
+        sprite = GetComponent<SpriteRenderer>();
+        sprite = GetComponent<SpriteRenderer>();
     }
 	
 	// Update is called once per frame
@@ -74,7 +80,6 @@ public class Meatball : MonoBehaviour {
             }
 
             //vel = rb.velocity;
-
             velocityX = rb.velocity.x;
             addedForce += 0.001f;
 
@@ -155,20 +160,26 @@ public class Meatball : MonoBehaviour {
     // ADDED CODE HERE!!!!!!!!!!!!!!!!!!!!
     public void ChooseBall()
     {
-        meatball = Random.Range(1, 10);
+        meatball = Random.Range(1, 18);
         if (meatball < 6)
         {
+            GetComponent<SpriteRenderer>().sprite = meatball1;
             scoreWorth = 1;
+            meatballWorth = 1;
             Debug.Log("ONE");
         }
         else if (meatball > 5 && meatball < 9)
         {
+            GetComponent<SpriteRenderer>().sprite = meatball2;
             scoreWorth = 2;
+            meatballWorth = 2;
             Debug.Log("TWO");
         }
         else if (meatball > 8)
         {
+            GetComponent<SpriteRenderer>().sprite = meatball3;
             scoreWorth = 3;
+            meatballWorth = 3;
             Debug.Log("THREE");
         }
     }

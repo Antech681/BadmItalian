@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
-  serving: 0
+  serving: 1
   impactForce: 10
   vel: {x: 0, y: 0, z: 0}
   velocityX: 0
@@ -125,6 +125,7 @@ MonoBehaviour:
   serveStrength: 5
   timer: 3
   splatter: {fileID: 198748598591516900, guid: b2753b007c3243e4b9fc2746a758f850, type: 2}
+  sortingOrder: 0
 --- !u!135 &135633659553876304
 SphereCollider:
   m_ObjectHideFlags: 1
