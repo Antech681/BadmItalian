@@ -468,8 +468,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c74d36aaf8f755479e32646d2a263d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ifPressed: 0
+  currentKitchen: 0
   kitchen: {fileID: 378140935}
-  otherKitchen: {fileID: 280685112}
   kitchenSprite: {fileID: 21300000, guid: 870f4b7c0940d8d41b96b3d0715b0201, type: 3}
 --- !u!1 &341888372
 GameObject:
@@ -1059,8 +1060,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c74d36aaf8f755479e32646d2a263d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ifPressed: 0
+  currentKitchen: 0
   kitchen: {fileID: 378140935}
-  otherKitchen: {fileID: 280685112}
   kitchenSprite: {fileID: 21300000, guid: 9aab3c94833ccbf4a945087fc744bc72, type: 3}
 --- !u!1 &663879462
 GameObject:
@@ -1338,8 +1340,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c74d36aaf8f755479e32646d2a263d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ifPressed: 0
+  currentKitchen: 0
   kitchen: {fileID: 378140935}
-  otherKitchen: {fileID: 280685112}
   kitchenSprite: {fileID: 21300000, guid: 8b0a42f62b361424c99a831a47d1b502, type: 3}
 --- !u!1 &833791454
 GameObject:
@@ -1549,8 +1552,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c74d36aaf8f755479e32646d2a263d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ifPressed: 0
+  currentKitchen: 0
   kitchen: {fileID: 378140935}
-  otherKitchen: {fileID: 280685112}
   kitchenSprite: {fileID: 21300000, guid: d26b2306c1b03c149917bfb9bb20f58f, type: 3}
 --- !u!1 &915159203
 GameObject:
@@ -2644,8 +2648,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c74d36aaf8f755479e32646d2a263d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ifPressed: 0
+  currentKitchen: 0
   kitchen: {fileID: 378140935}
-  otherKitchen: {fileID: 280685112}
   kitchenSprite: {fileID: 21300000, guid: 6c1c7a477436e104ca0bab4687d59406, type: 3}
 --- !u!1001 &1977224354
 Prefab:
@@ -2730,12 +2735,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79e7d1c4b0912304ab3b1328a486a1c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kitchen1: {fileID: 1937968059}
-  kitchen2: {fileID: 836203139}
-  kitchen3: {fileID: 323249560}
-  kitchen4: {fileID: 629034046}
-  kitchen5: {fileID: 2080990239}
-  kitchen6: {fileID: 710210972}
+  backgroundKitchen: {fileID: 280685112}
+  kitchen1: {fileID: 21300000, guid: 6c1c7a477436e104ca0bab4687d59406, type: 3}
+  kitchen2: {fileID: 21300000, guid: d26b2306c1b03c149917bfb9bb20f58f, type: 3}
+  kitchen3: {fileID: 21300000, guid: 870f4b7c0940d8d41b96b3d0715b0201, type: 3}
+  kitchen4: {fileID: 21300000, guid: 9aab3c94833ccbf4a945087fc744bc72, type: 3}
+  kitchen5: {fileID: 21300000, guid: 138c75a6cc21b1d4b8fe61f369520f2e, type: 3}
+  kitchen6: {fileID: 21300000, guid: 8b0a42f62b361424c99a831a47d1b502, type: 3}
   backing1: {fileID: 1802123604}
   backing2: {fileID: 1130094317}
   backing3: {fileID: 1721753042}
@@ -2744,13 +2750,6 @@ MonoBehaviour:
   backing6: {fileID: 1114139064}
   ready: {r: 0.12156863, g: 0.9411765, b: 0, a: 1}
   unready: {r: 0.7725491, g: 0.24313727, b: 0.15294118, a: 1}
-  selectedKitchen1: 0
-  selectedKitchen2: 0
-  selectedKitchen3: 0
-  selectedKitchen4: 0
-  selectedKitchen5: 0
-  selectedKitchen6: 0
-  confirmed: 0
 --- !u!114 &2041431984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2897,8 +2896,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c74d36aaf8f755479e32646d2a263d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ifPressed: 0
+  currentKitchen: 0
   kitchen: {fileID: 378140935}
-  otherKitchen: {fileID: 280685112}
   kitchenSprite: {fileID: 21300000, guid: 138c75a6cc21b1d4b8fe61f369520f2e, type: 3}
 --- !u!1 &2083900797
 GameObject:

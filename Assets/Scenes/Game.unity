@@ -748,22 +748,26 @@ MonoBehaviour:
   meatball: {fileID: 114657193291280782, guid: ffed915d6feb0544893cb908d09ea3fd, type: 2}
   leftGoal: {fileID: 1448686037}
   rightGoal: {fileID: 2060402211}
-  p1ScoreText: {fileID: 1839813721}
-  p2ScoreText: {fileID: 1821407895}
   serveTimer: {fileID: 2015285398}
   scoreCap: 6
   p1RoundScore: 0
   p2RoundScore: 0
   p1RoundPoints: 
   p2RoundPoints: 
-  p1RoundText: {fileID: 1839813721}
-  p2RoundText: {fileID: 1821407895}
   roundCap: 3
+  blueBG: {fileID: 0}
+  redBG: {fileID: 0}
+  victoryRed: {fileID: 0}
+  defeatRed: {fileID: 0}
+  victoryBlue: {fileID: 0}
+  defeatBlue: {fileID: 0}
+  endgameBG: {fileID: 0}
   gameOn: 0
   serveHorizontal:
   - -10
   - 10
   whichDirection: 0
+  serveTo: 0
 --- !u!1 &276173134
 GameObject:
   m_ObjectHideFlags: 0
@@ -1589,7 +1593,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whichPlayer: 1
   racCon: {fileID: 403795408}
+  startHitForce: 0
   hitForce: 20
+  hitForceChargeRate: 0
+  hitForceMax: 0
   velocityX: 0
   velocityY: 0
 --- !u!59 &456724810
@@ -1907,7 +1914,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whichPlayer: 1
   racCon: {fileID: 403795408}
+  startHitForce: 0
   hitForce: 20
+  hitForceChargeRate: 0
+  hitForceMax: 0
   velocityX: 0
   velocityY: 0
 --- !u!65 &485295367
@@ -3400,7 +3410,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whichPlayer: 0
   racCon: {fileID: 969046057}
+  startHitForce: 0
   hitForce: 20
+  hitForceChargeRate: 0
+  hitForceMax: 0
   velocityX: 0
   velocityY: 0
 --- !u!1 &1326288119
@@ -3535,7 +3548,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1358854904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3608,7 +3621,6 @@ RectTransform:
   - {fileID: 1374669917}
   - {fileID: 160324001}
   - {fileID: 1444890935}
-  - {fileID: 910936771}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3844,7 +3856,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whichPlayer: 0
   racCon: {fileID: 969046057}
+  startHitForce: 0
   hitForce: 20
+  hitForceChargeRate: 0
+  hitForceMax: 0
   velocityX: 0
   velocityY: 0
 --- !u!1 &1406484977
@@ -5263,80 +5278,6 @@ Transform:
   m_Father: {fileID: 686943444}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2092991550
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 2092991551}
-  - component: {fileID: 2092991554}
-  - component: {fileID: 2092991553}
-  m_Layer: 5
-  m_Name: Text (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2092991551
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2092991550}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 113754557}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 478}
-  m_SizeDelta: {x: 350, y: 150}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2092991553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2092991550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: de7f22718950f9e4192f41f42c6aacd4, type: 3}
-    m_FontSize: 91
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 128
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 00:00
---- !u!222 &2092991554
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2076632347}
 --- !u!1 &2092991550
 GameObject:
   m_ObjectHideFlags: 0

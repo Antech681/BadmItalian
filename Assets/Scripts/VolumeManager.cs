@@ -17,15 +17,12 @@ public class VolumeManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         vcObjects = FindObjectsOfType<VolumeController>();
-
-<<<<<<< HEAD
         if (volumeSlider == null)
         {
             return;
         }
 
         volumeText = volumeSlider.GetComponentInChildren<Text>();
-	}
         if (!vmExists)
         {
             vmExists = true;
