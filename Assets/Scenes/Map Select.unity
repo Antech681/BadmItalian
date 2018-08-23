@@ -154,7 +154,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1945100484627564, guid: fe8ec5da2d5f48b4aafa3ea5cfe1765b, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fe8ec5da2d5f48b4aafa3ea5cfe1765b, type: 2}
@@ -189,7 +189,7 @@ RectTransform:
   m_Children:
   - {fileID: 833791455}
   m_Father: {fileID: 1889218883}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -270,6 +270,74 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 80188513}
+--- !u!1 &201006686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 201006687}
+  - component: {fileID: 201006689}
+  - component: {fileID: 201006688}
+  m_Layer: 5
+  m_Name: Panel 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &201006687
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 201006686}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.8957342, y: 0.42781246, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1889218883}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -92}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &201006688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 201006686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.6862745}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &201006689
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 201006686}
 --- !u!1 &280685112
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,7 +366,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1889218883}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -317,7 +385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.49019608}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.6862745}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -369,7 +437,7 @@ RectTransform:
   m_Children:
   - {fileID: 341888373}
   m_Father: {fileID: 1889218883}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -473,7 +541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ifPressed: 0
-  currentKitchen: 0
+  currentKitchen: 3
   kitchen: {fileID: 378140935}
   kitchenSprite: {fileID: 21300000, guid: 870f4b7c0940d8d41b96b3d0715b0201, type: 3}
 --- !u!1 &341888372
@@ -659,7 +727,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1889218883}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -678,7 +746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.49019608}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.88235295}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -861,7 +929,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1171642414081662, guid: ddeb3532f49554049b1f2115d4f61ba2, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ddeb3532f49554049b1f2115d4f61ba2, type: 2}
@@ -894,7 +962,7 @@ RectTransform:
   m_LocalScale: {x: 0.26, y: 0.26999998, z: 0.26}
   m_Children: []
   m_Father: {fileID: 1889218883}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -965,7 +1033,7 @@ RectTransform:
   m_Children:
   - {fileID: 1844651300}
   m_Father: {fileID: 1889218883}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1069,7 +1137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ifPressed: 0
-  currentKitchen: 0
+  currentKitchen: 4
   kitchen: {fileID: 378140935}
   kitchenSprite: {fileID: 21300000, guid: 9aab3c94833ccbf4a945087fc744bc72, type: 3}
 --- !u!1 &663879462
@@ -1174,7 +1242,7 @@ RectTransform:
   m_LocalScale: {x: 0.26, y: 0.26999998, z: 0.26}
   m_Children: []
   m_Father: {fileID: 1889218883}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1245,7 +1313,7 @@ RectTransform:
   m_Children:
   - {fileID: 1922073427}
   m_Father: {fileID: 1889218883}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1349,7 +1417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ifPressed: 0
-  currentKitchen: 0
+  currentKitchen: 6
   kitchen: {fileID: 378140935}
   kitchenSprite: {fileID: 21300000, guid: 8b0a42f62b361424c99a831a47d1b502, type: 3}
 --- !u!1 &833791454
@@ -1457,7 +1525,7 @@ RectTransform:
   m_Children:
   - {fileID: 1646020282}
   m_Father: {fileID: 1889218883}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1561,7 +1629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ifPressed: 0
-  currentKitchen: 0
+  currentKitchen: 2
   kitchen: {fileID: 378140935}
   kitchenSprite: {fileID: 21300000, guid: d26b2306c1b03c149917bfb9bb20f58f, type: 3}
 --- !u!1 &915159203
@@ -1734,7 +1802,7 @@ RectTransform:
   m_LocalScale: {x: 0.26, y: 0.26999998, z: 0.26}
   m_Children: []
   m_Father: {fileID: 1889218883}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1802,7 +1870,7 @@ RectTransform:
   m_LocalScale: {x: 0.26, y: 0.26999998, z: 0.26}
   m_Children: []
   m_Father: {fileID: 1889218883}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2153,7 +2221,7 @@ RectTransform:
   m_LocalScale: {x: 0.26, y: 0.26999998, z: 0.26}
   m_Children: []
   m_Father: {fileID: 1889218883}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2221,7 +2289,7 @@ RectTransform:
   m_LocalScale: {x: 0.26, y: 0.27, z: 0.26}
   m_Children: []
   m_Father: {fileID: 1889218883}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2421,12 +2489,13 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1020230942}
-  - {fileID: 378140936}
   - {fileID: 280685113}
+  - {fileID: 378140936}
   - {fileID: 1564562570}
   - {fileID: 1465547538}
   - {fileID: 440524924}
   - {fileID: 1613086333}
+  - {fileID: 201006687}
   - {fileID: 1802123605}
   - {fileID: 1937968060}
   - {fileID: 1130094318}
@@ -2553,7 +2622,7 @@ RectTransform:
   m_Children:
   - {fileID: 915159204}
   m_Father: {fileID: 1889218883}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2657,7 +2726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ifPressed: 0
-  currentKitchen: 0
+  currentKitchen: 1
   kitchen: {fileID: 378140935}
   kitchenSprite: {fileID: 21300000, guid: 6c1c7a477436e104ca0bab4687d59406, type: 3}
 --- !u!1001 &1977224354
@@ -2701,7 +2770,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1836599212303666, guid: 26590d566365d9146b0f49fb031b8de5, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26590d566365d9146b0f49fb031b8de5, type: 2}
@@ -2805,7 +2874,7 @@ RectTransform:
   m_Children:
   - {fileID: 663879463}
   m_Father: {fileID: 1889218883}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2909,7 +2978,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ifPressed: 0
-  currentKitchen: 0
+  currentKitchen: 5
   kitchen: {fileID: 378140935}
   kitchenSprite: {fileID: 21300000, guid: 138c75a6cc21b1d4b8fe61f369520f2e, type: 3}
 --- !u!1 &2083900797
