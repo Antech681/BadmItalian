@@ -232,8 +232,6 @@ public class GameplayManager : MonoBehaviour {
 
     public void RoundRestart()
     {
-<<<<<<< HEAD
-=======
         if (p1Score > p2Score)
         {
             p1RoundScore += 1;
@@ -246,7 +244,6 @@ public class GameplayManager : MonoBehaviour {
             p2RoundPoints = p2RoundScore.ToString();
             p2RoundText.text = p2RoundPoints;
         }
->>>>>>> mattTest
         rightGoal.score = 0;
         leftGoal.score = 0;
         pot1.GetComponent<SpriteRenderer>().sprite = dirty00;

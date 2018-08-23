@@ -26,7 +26,6 @@ public class VolumeManager : MonoBehaviour {
 
         volumeText = volumeSlider.GetComponentInChildren<Text>();
 	}
-=======
         if (!vmExists)
         {
             vmExists = true;
@@ -37,7 +36,6 @@ public class VolumeManager : MonoBehaviour {
             Destroy(gameObject);
         }
     }
->>>>>>> mattTest
 	
 	// Update is called once per frame
 	void Update () {
