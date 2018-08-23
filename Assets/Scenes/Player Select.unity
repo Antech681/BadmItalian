@@ -604,7 +604,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: d9e54bd4cb042204a8c4928582b37ba3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f04fc337d613aac4cbb496726d1cbfda, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -656,6 +656,10 @@ Prefab:
     - target: {fileID: 4675141432145402, guid: ddeb3532f49554049b1f2115d4f61ba2, type: 2}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171642414081662, guid: ddeb3532f49554049b1f2115d4f61ba2, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ddeb3532f49554049b1f2115d4f61ba2, type: 2}
@@ -1336,22 +1340,22 @@ MonoBehaviour:
   player2: {fileID: 260125029}
   ready: {r: 0.12156863, g: 1, b: 0, a: 1}
   unready: {r: 1, g: 1, b: 1, a: 1}
-  char1R: {fileID: 21300000, guid: 3082421134dc6ea448a64542fe1133c2, type: 3}
-  char2R: {fileID: 21300000, guid: 9691973686cdb7d4faecf26e415bd489, type: 3}
-  char3R: {fileID: 21300000, guid: e1a170135eab0b64c94cc016fb96aaff, type: 3}
-  char4R: {fileID: 21300000, guid: 9af8f083c8d94ad4f8405d32f0b238e2, type: 3}
-  char5R: {fileID: 21300000, guid: f1d795dd3f44a5f40bb9cd55260707fe, type: 3}
-  char6R: {fileID: 21300000, guid: e548a7f0663195544b587bab6ab59020, type: 3}
-  char7R: {fileID: 21300000, guid: 6e2b456f2dbf1014e829ab1700f33cdc, type: 3}
-  char8R: {fileID: 21300000, guid: 55a22bbac48b7c74ba79d9489716c7de, type: 3}
-  char1B: {fileID: 21300000, guid: 18a1c41c05698eb45b66b932c3dcaa85, type: 3}
-  char2B: {fileID: 21300000, guid: 2f01951fe18f0bf48a4d380fc5e14cd3, type: 3}
-  char3B: {fileID: 21300000, guid: d0ac60d0a09f1ae47a766257276c92cb, type: 3}
-  char4B: {fileID: 21300000, guid: 1d9b78b9b8cefea4d9001b6f68b6ee91, type: 3}
-  char5B: {fileID: 21300000, guid: 2ae963e12694ab54d97f8115b6775af1, type: 3}
-  char6B: {fileID: 21300000, guid: bda99c3edad6c204296b904e14cc418f, type: 3}
-  char7B: {fileID: 21300000, guid: b24fea50648059241a24676301747f33, type: 3}
-  char8B: {fileID: 21300000, guid: de2964c553923a94eac2e58e02f9cae2, type: 3}
+  char1R: {fileID: 21300000, guid: 1a43248f93848d041930a75047666d63, type: 3}
+  char2R: {fileID: 21300000, guid: 53cc0cc0268029c42bf89688f3bd8b65, type: 3}
+  char3R: {fileID: 21300000, guid: 8de46eb0802d81846adc4dfa470b6704, type: 3}
+  char4R: {fileID: 21300000, guid: cea7889c067aced4e8aa6727198848c2, type: 3}
+  char5R: {fileID: 21300000, guid: 7dc6de04573ea44458861874d98f7e61, type: 3}
+  char6R: {fileID: 21300000, guid: 2e09dd6293601a846be55147c67b9a7e, type: 3}
+  char7R: {fileID: 21300000, guid: b7a8643576abc5146a224bdb961cc0b2, type: 3}
+  char8R: {fileID: 21300000, guid: 5086e7d95ff9d1247aab9a788d86230c, type: 3}
+  char1B: {fileID: 21300000, guid: 99c2d787a839bdb489d9512a2ded5e53, type: 3}
+  char2B: {fileID: 21300000, guid: 6d20e3d9f958b944b8e523c350bac283, type: 3}
+  char3B: {fileID: 21300000, guid: 007293570f62db34b8eedb4164f71ced, type: 3}
+  char4B: {fileID: 21300000, guid: b56752ff929718740b0be464965d2efb, type: 3}
+  char5B: {fileID: 21300000, guid: 268e82875e58cf64fb8f169fe29f02d1, type: 3}
+  char6B: {fileID: 21300000, guid: a6e43410523a2914abf7712ea90356d0, type: 3}
+  char7B: {fileID: 21300000, guid: 4e7224ddff2f4b84ba0523813d18c7a5, type: 3}
+  char8B: {fileID: 21300000, guid: 30e1e0dab120a21419d7307b082b1f23, type: 3}
   p1Confirmed: 0
   p2Confirmed: 0
   playerSelecting: 0
@@ -1419,6 +1423,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1945100484627564, guid: fe8ec5da2d5f48b4aafa3ea5cfe1765b, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fe8ec5da2d5f48b4aafa3ea5cfe1765b, type: 2}
   m_IsPrefabParent: 0
@@ -1433,7 +1441,6 @@ GameObject:
   - component: {fileID: 754993532}
   - component: {fileID: 754993531}
   - component: {fileID: 754993530}
-  - component: {fileID: 754993533}
   m_Layer: 5
   m_Name: Player 1
   m_TagString: Untagged
@@ -1530,7 +1537,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 49c0718d3e3843a4aabb918a8a953d0b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 558c9772c1331e549b11de891fa271de, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1544,17 +1551,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 754993528}
---- !u!114 &754993533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 754993528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2308769ff29b3864b82e5f64dcca564c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &770587587
 GameObject:
   m_ObjectHideFlags: 0
@@ -2278,6 +2274,10 @@ Prefab:
     - target: {fileID: 4429236504817438, guid: 26590d566365d9146b0f49fb031b8de5, type: 2}
       propertyPath: m_RootOrder
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836599212303666, guid: 26590d566365d9146b0f49fb031b8de5, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26590d566365d9146b0f49fb031b8de5, type: 2}

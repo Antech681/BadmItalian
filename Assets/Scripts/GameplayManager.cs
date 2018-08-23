@@ -108,7 +108,7 @@ public class GameplayManager : MonoBehaviour {
         sfxMan = FindObjectOfType<SFXManager>();
         roundStars1 = GameObject.Find("P1StarCount").GetComponent<RoundStars>();
         roundStars2 = GameObject.Find("P2StarCount").GetComponent<RoundStars>();
-        roundsMan = GameObject.Find("SettingsCanvas").GetComponent<RoundsManager>();
+        //roundsMan = GameObject.Find("SettingsCanvas").GetComponent<RoundsManager>();
         startDirection = Random.Range(0, 2);
         whichDirection = serveHorizontal[startDirection];
         if (startDirection == 0)

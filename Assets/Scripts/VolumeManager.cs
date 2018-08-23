@@ -50,7 +50,10 @@ public class VolumeManager : MonoBehaviour {
             vcObjects[i].SetAudioLevel(currentVolumeLevel);
         }
 
-        currentVolumeLevel = volumeSlider.value;
-        volumeText.text = Mathf.RoundToInt(volumeSlider.value * 100) + "%";
+        if (volumeSlider != null)
+        {
+            currentVolumeLevel = volumeSlider.value;
+            volumeText.text = Mathf.RoundToInt(volumeSlider.value * 100) + "%";
+        }
     }
 }
