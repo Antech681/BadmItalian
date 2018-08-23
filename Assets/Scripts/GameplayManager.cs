@@ -44,6 +44,7 @@ public class GameplayManager : MonoBehaviour {
     private int p2Score;
 
     public ServeTimer serveTimer; // ADD
+    public RoundsManager roundsMan;
 
     public int scoreCap;
     public int p1RoundScore;
