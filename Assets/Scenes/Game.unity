@@ -595,13 +595,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53cc53a954a0f0147b7ecb4b504a5150, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kitchenBench: {fileID: 1925712224}
-  currentKitchen1: {fileID: 21300000, guid: e08c7364a34321d40a1cf668610aa05d, type: 3}
-  currentKitchen2: {fileID: 21300000, guid: 757be7aaced5ba94296883cbafe0d341, type: 3}
-  currentKitchen3: {fileID: 21300000, guid: 7b026db800b06584a952d39c1b865a17, type: 3}
-  currentKitchen4: {fileID: 21300000, guid: 34c69fd2334e4b3478838d42af204a5a, type: 3}
-  currentKitchen5: {fileID: 21300000, guid: d4d9eb2ab9f2d24408d61d600ba29f44, type: 3}
-  currentKitchen6: {fileID: 21300000, guid: eefc1982cd72d6e4caf37d558473e449, type: 3}
 --- !u!1 &249045274
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,20 +741,17 @@ MonoBehaviour:
   meatball: {fileID: 114657193291280782, guid: ffed915d6feb0544893cb908d09ea3fd, type: 2}
   leftGoal: {fileID: 1448686037}
   rightGoal: {fileID: 2060402211}
+  p1ScoreText: {fileID: 0}
+  p2ScoreText: {fileID: 0}
   serveTimer: {fileID: 2015285398}
   scoreCap: 6
   p1RoundScore: 0
   p2RoundScore: 0
   p1RoundPoints: 
   p2RoundPoints: 
+  p1RoundText: {fileID: 0}
+  p2RoundText: {fileID: 0}
   roundCap: 3
-  blueBG: {fileID: 0}
-  redBG: {fileID: 0}
-  victoryRed: {fileID: 0}
-  defeatRed: {fileID: 0}
-  victoryBlue: {fileID: 0}
-  defeatBlue: {fileID: 0}
-  endgameBG: {fileID: 0}
   gameOn: 0
   serveHorizontal:
   - -10
@@ -2177,13 +2167,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53cc53a954a0f0147b7ecb4b504a5150, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kitchenBench: {fileID: 1925712224}
-  currentKitchen1: {fileID: 21300000, guid: 9992cc695a5f0f44daa1a11dceadb592, type: 3}
-  currentKitchen2: {fileID: 21300000, guid: e7a8f83f4f67fe94387b3b30d51490b7, type: 3}
-  currentKitchen3: {fileID: 21300000, guid: 9992cc695a5f0f44daa1a11dceadb592, type: 3}
-  currentKitchen4: {fileID: 21300000, guid: e7a8f83f4f67fe94387b3b30d51490b7, type: 3}
-  currentKitchen5: {fileID: 21300000, guid: d85713eb2ae9d2548a61c97dab611ad4, type: 3}
-  currentKitchen6: {fileID: 21300000, guid: d85713eb2ae9d2548a61c97dab611ad4, type: 3}
 --- !u!1 &583807493
 GameObject:
   m_ObjectHideFlags: 0
@@ -3112,13 +3095,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53cc53a954a0f0147b7ecb4b504a5150, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kitchenBench: {fileID: 1925712224}
-  currentKitchen1: {fileID: 21300000, guid: 9992cc695a5f0f44daa1a11dceadb592, type: 3}
-  currentKitchen2: {fileID: 21300000, guid: e7a8f83f4f67fe94387b3b30d51490b7, type: 3}
-  currentKitchen3: {fileID: 21300000, guid: 9992cc695a5f0f44daa1a11dceadb592, type: 3}
-  currentKitchen4: {fileID: 21300000, guid: e7a8f83f4f67fe94387b3b30d51490b7, type: 3}
-  currentKitchen5: {fileID: 21300000, guid: d85713eb2ae9d2548a61c97dab611ad4, type: 3}
-  currentKitchen6: {fileID: 21300000, guid: d85713eb2ae9d2548a61c97dab611ad4, type: 3}
 --- !u!1 &970288934
 GameObject:
   m_ObjectHideFlags: 0
@@ -3548,7 +3524,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1358854904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4988,13 +4964,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53cc53a954a0f0147b7ecb4b504a5150, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kitchenBench: {fileID: 1925712224}
-  currentKitchen1: {fileID: 21300000, guid: 8c0775e293fff3b40a80ee8801690448, type: 3}
-  currentKitchen2: {fileID: 21300000, guid: fd8c55e476100c34fbac73c9477b46e3, type: 3}
-  currentKitchen3: {fileID: 21300000, guid: 7a831b966cc232647a17bb007243fa05, type: 3}
-  currentKitchen4: {fileID: 21300000, guid: 0ab15bd885769f04c9ce0fa5b8af6588, type: 3}
-  currentKitchen5: {fileID: 21300000, guid: dc9f48df7f4d267488f135cb6617979f, type: 3}
-  currentKitchen6: {fileID: 21300000, guid: e42206be4b0cd884e8313e6bfc976059, type: 3}
 --- !u!1 &1959420583
 GameObject:
   m_ObjectHideFlags: 0
