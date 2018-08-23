@@ -6,44 +6,50 @@ using UnityEngine.EventSystems;
 
 public class Kitchen1 : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    public bool ifPressed;
+    public int currentKitchen;
+
     public GameObject kitchen;
-    public GameObject otherKitchen;
     public Sprite kitchenSprite;
 
     void Start()
     {
         kitchen.SetActive(false);
-        otherKitchen.SetActive(false);
     }
 
     void Update()
     {
-         GetComponent<Button>().onClick.AddListener(TaskOnClick);
+        if (ifPressed == true)
+        {
+            GetComponent<Button>().onClick.AddListener(Unconfirmed);
+        }
+        else
+        {
+            GetComponent<Button>().onClick.AddListener(Confirmed);
+        }
     }
 
-    void TaskOnClick()
+    void Confirmed()
     {
+        ifPressed = true;
+        Kitchen2.selectedKitchen = currentKitchen;
         kitchen.SetActive(false);
-        otherKitchen.SetActive(true);
-        otherKitchen.GetComponent<Image>().sprite = kitchenSprite;
+    }
+
+    void Unconfirmed()
+    {
+        ifPressed = false;
+        Kitchen2.selectedKitchen = 0;
+        kitchen.SetActive(false);
     }
 
 public void OnPointerEnter(PointerEventData eventData)
     {
-        otherKitchen.SetActive(false);
         kitchen.SetActive(true);
         kitchen.GetComponent<Image>().sprite = kitchenSprite;
     }
     public void OnPointerExit(PointerEventData eventData)
     {
         kitchen.SetActive(false);
-        if (Kitchen2.selected == 1)
-        {
-            otherKitchen.SetActive(true);
-        }
-        if (Kitchen2.selected == 0)
-        {
-            otherKitchen.SetActive(false);
-        }
     }
 }

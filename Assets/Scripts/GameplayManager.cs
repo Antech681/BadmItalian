@@ -32,27 +32,35 @@ public class GameplayManager : MonoBehaviour {
 
     public Meatball meatball;
 
-    public Goal leftGoal;
-    public Goal rightGoal;
+    public Goal leftGoal; // ADD
+    public Goal rightGoal; // ADD
 
-    public Text p1ScoreText;
-    public Text p2ScoreText;
+    public Text p1ScoreText; // ADD
+    public Text p2ScoreText; // ADD
     private string p1ScoreString;
     private string p2ScoreString;
 
     private int p1Score;
     private int p2Score;
 
-    public ServeTimer serveTimer;
+    public ServeTimer serveTimer; // ADD
 
     public int scoreCap;
     public int p1RoundScore;
     public int p2RoundScore;
     public string p1RoundPoints;
     public string p2RoundPoints;
-    public Text p1RoundText;
-    public Text p2RoundText;
+    public Text p1RoundText; // ADD
+    public Text p2RoundText; // ADD
     public int roundCap;
+
+    public GameObject blueBG;
+    public GameObject redBG;
+    public GameObject victoryRed;
+    public GameObject defeatRed;
+    public GameObject victoryBlue;
+    public GameObject defeatBlue;
+    public GameObject endgameBG;
 
     public bool gameOn;
 
@@ -109,6 +117,21 @@ public class GameplayManager : MonoBehaviour {
         {
             serveTo = 2;
         }
+        pot1 = GameObject.Find("Pot 1");
+        pot2 = GameObject.Find("Pot 2");
+        leftGoal = GameObject.Find("Goal Left").GetComponent<Goal>();
+        rightGoal = GameObject.Find("Goal Right").GetComponent<Goal>();
+        serveTimer = GameObject.Find("Text").GetComponent<ServeTimer>();
+
+        endgameBG = GameObject.Find("Win/Loss");
+        blueBG = GameObject.Find("Background Blue");
+        redBG = GameObject.Find("Background Red");
+        victoryRed = GameObject.Find("Victory Red");
+        defeatRed = GameObject.Find("Defeat Red");
+        victoryBlue = GameObject.Find("Victory Blue");
+        defeatBlue = GameObject.Find("Defeat Blue");
+
+        endgameBG.SetActive(false);
     }
 	
 	// Update is called once per frame
@@ -232,7 +255,24 @@ public class GameplayManager : MonoBehaviour {
 
     public void EndGame()
     {
-        Debug.Log("End Game");
-        //Insert endgame code here
+        endgameBG.SetActive(true);
+        if (p1RoundScore > p2RoundScore)
+        {
+            blueBG.SetActive(false);
+            redBG.SetActive(true);
+            victoryBlue.SetActive(false);
+            victoryRed.SetActive(true);
+            defeatBlue.SetActive(false);
+            defeatRed.SetActive(true);
+        }
+        if (p2RoundScore > p1RoundScore)
+        {
+            blueBG.SetActive(true);
+            redBG.SetActive(false);
+            victoryBlue.SetActive(true);
+            victoryRed.SetActive(false);
+            defeatBlue.SetActive(true);
+            defeatRed.SetActive(false);
+        }
     }
 }

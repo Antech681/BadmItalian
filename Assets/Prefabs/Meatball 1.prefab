@@ -107,9 +107,9 @@ MonoBehaviour:
   velocityX: 0
   velocityY: 0
   addedForce: 5
-  meatball1: {fileID: 21300000, guid: 709cc3e925564504d99556ab69736364, type: 3}
-  meatball2: {fileID: 21300000, guid: 845db783394d47e47aac363c6a870f29, type: 3}
-  meatball3: {fileID: 21300000, guid: e792fe45fee93c34a898350506bce843, type: 3}
+  meatball1: {fileID: 21300000, guid: a6d7a9a2c8ffe8d44994c8a09afe8ae2, type: 3}
+  meatball2: {fileID: 21300000, guid: 65c74102d10098d4980397f874908366, type: 3}
+  meatball3: {fileID: 21300000, guid: 1c653af3eff26b74abe26ffde29682a1, type: 3}
   meatball: 0
   scoreWorth: 1
   startingPosition: {x: 0, y: 3, z: 0}
@@ -4751,12 +4751,12 @@ SpriteRenderer:
   m_SortingLayerID: -1171739369
   m_SortingLayer: 1
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 709cc3e925564504d99556ab69736364, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a6d7a9a2c8ffe8d44994c8a09afe8ae2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.94, y: 2.6}
+  m_Size: {x: 3.8, y: 2.94}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

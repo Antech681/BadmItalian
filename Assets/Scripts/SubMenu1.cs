@@ -10,7 +10,7 @@ public class SubMenu1 : MonoBehaviour
 
     void Update()
     {
-        if (Kitchen2.selected == 1)
+        if (Kitchen2.arenaSelected >= 1)
         {
             resume.GetComponent<Button>().onClick.AddListener(ContinueScene);
         }
@@ -18,6 +18,6 @@ public class SubMenu1 : MonoBehaviour
 
     void ContinueScene()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Intro");
     }
 }

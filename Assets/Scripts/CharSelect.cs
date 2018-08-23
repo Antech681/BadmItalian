@@ -35,8 +35,8 @@ public class CharSelect : MonoBehaviour {
     public bool p1Confirmed;
     public bool p2Confirmed;
 
-    public string p1PlayerName;
-    public string p2PlayerName;
+    public static string p1PlayerName;
+    public static string p2PlayerName;
     public int playerSelecting; // 0 = not selecting, 1 = choosing P1, 2 = choosing P2.
 
     public Text p1NameText;

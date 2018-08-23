@@ -51,7 +51,8 @@ public class Meatball : MonoBehaviour {
         {
             serving = true;
             addedForce = 4.5f;
-            gameManager.InstTimer();
+            //gameManager.InstTimer();
+            gameManager.Invoke("InstTimer", 0.1f);
             ChooseBall(); // ADDED CODE HERE!!!!!!!!!!!!!!!!!!!!
         }
         serving = true;

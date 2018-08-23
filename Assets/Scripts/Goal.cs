@@ -25,6 +25,15 @@ public class Goal : MonoBehaviour {
     private Meatball meatballInPlay;
     public int howMuchToScore;
 
+    // Use this for initialization
+    void Start()
+    {
+        maxDirty = playerBar.sizeDelta.x;
+        playerBar.sizeDelta = new Vector2(currentDirty, playerBar.sizeDelta.y);
+        dirty = maxDirty / 6;
+        gameManager = FindObjectOfType<GameplayManager>();
+    }
+
     // Update is called once per frame
     // ADDED CODE HERE!!!!!!!!!!!!!!!!!!!!
     void Update()
@@ -41,13 +50,6 @@ public class Goal : MonoBehaviour {
     public float maxDirty;
     public float currentDirty = 0;
     private float dirty;
-
-    // Use this for initialization
-    void Start () {
-        maxDirty = playerBar.sizeDelta.x;
-        playerBar.sizeDelta = new Vector2(currentDirty, playerBar.sizeDelta.y);
-        dirty = maxDirty / 6;
-    }
 
     private void OnTriggerEnter (Collider other)
     {
