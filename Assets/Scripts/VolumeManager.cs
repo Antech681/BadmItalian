@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class VolumeManager : MonoBehaviour {
 
+    private static bool vmExists;
+
     public VolumeController[] vcObjects;
     public float maxVolumeLevel = 1.0f;
     public float currentVolumeLevel;
@@ -16,6 +18,7 @@ public class VolumeManager : MonoBehaviour {
 	void Start () {
         vcObjects = FindObjectsOfType<VolumeController>();
 
+<<<<<<< HEAD
         if (volumeSlider == null)
         {
             return;
@@ -23,6 +26,16 @@ public class VolumeManager : MonoBehaviour {
 
         volumeText = volumeSlider.GetComponentInChildren<Text>();
 	}
+        if (!vmExists)
+        {
+            vmExists = true;
+            DontDestroyOnLoad(transform.gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {

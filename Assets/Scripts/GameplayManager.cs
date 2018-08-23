@@ -15,12 +15,14 @@ public class GameplayManager : MonoBehaviour {
     public GameObject pot1;
     public GameObject pot2;
 
+    public Sprite dirty00;
     public Sprite dirty01;
     public Sprite dirty02;
     public Sprite dirty03;
     public Sprite dirty04;
     public Sprite dirty05;
     public Sprite dirty06;
+    public Sprite otherDirty00;
     public Sprite otherDirty01;
     public Sprite otherDirty02;
     public Sprite otherDirty03;
@@ -30,24 +32,35 @@ public class GameplayManager : MonoBehaviour {
 
     public Meatball meatball;
 
-    public Goal leftGoal;
-    public Goal rightGoal;
+    public Goal leftGoal; // ADD
+    public Goal rightGoal; // ADD
 
-    public Text p1ScoreText;
-    public Text p2ScoreText;
+    public Text p1ScoreText; // ADD
+    public Text p2ScoreText; // ADD
     private string p1ScoreString;
     private string p2ScoreString;
 
     private int p1Score;
     private int p2Score;
 
-    public ServeTimer serveTimer;
-    public RoundsManager roundsMan;
+    public ServeTimer serveTimer; // ADD
 
     public int scoreCap;
     public int p1RoundScore;
     public int p2RoundScore;
+    public string p1RoundPoints;
+    public string p2RoundPoints;
+    public Text p1RoundText; // ADD
+    public Text p2RoundText; // ADD
     public int roundCap;
+
+    public GameObject blueBG;
+    public GameObject redBG;
+    public GameObject victoryRed;
+    public GameObject defeatRed;
+    public GameObject victoryBlue;
+    public GameObject defeatBlue;
+    public GameObject endgameBG;
 
     public bool gameOn;
 
@@ -105,8 +118,21 @@ public class GameplayManager : MonoBehaviour {
         {
             serveTo = 2;
         }
-        roundCap = roundsMan.pointsToWin;
-        //Invoke("Setup", 0.1f);
+        pot1 = GameObject.Find("Pot 1");
+        pot2 = GameObject.Find("Pot 2");
+        leftGoal = GameObject.Find("Goal Left").GetComponent<Goal>();
+        rightGoal = GameObject.Find("Goal Right").GetComponent<Goal>();
+        serveTimer = GameObject.Find("Text").GetComponent<ServeTimer>();
+
+        endgameBG = GameObject.Find("Win/Loss");
+        blueBG = GameObject.Find("Background Blue");
+        redBG = GameObject.Find("Background Red");
+        victoryRed = GameObject.Find("Victory Red");
+        defeatRed = GameObject.Find("Defeat Red");
+        victoryBlue = GameObject.Find("Victory Blue");
+        defeatBlue = GameObject.Find("Defeat Blue");
+
+        endgameBG.SetActive(false);
     }
 	
     void Setup()
@@ -124,8 +150,8 @@ public class GameplayManager : MonoBehaviour {
             p1ScoreString = p1Score.ToString();
             p2ScoreString = p2Score.ToString();
 
-            p1ScoreText.text = p1ScoreString;
-            p2ScoreText.text = p2ScoreString;
+            //p1ScoreText.text = p1ScoreString;
+            //p2ScoreText.text = p2ScoreString;
 
             if (p1RoundScore == roundCap || p2RoundScore == roundCap)
             {
@@ -160,7 +186,7 @@ public class GameplayManager : MonoBehaviour {
             roundStars2.Invoke("UpdateStars", 0f);
             Invoke("RoundRestart", 2f);
         }
-        /*if (p2Score == 1)
+        if (p2Score == 1)
         {
             pot1.GetComponent<SpriteRenderer>().sprite = dirty01;
         }
@@ -207,18 +233,49 @@ public class GameplayManager : MonoBehaviour {
         if (p1Score == 6)
         {
             pot2.GetComponent<SpriteRenderer>().sprite = otherDirty06;
-        }*/
+        }
     }
 
     public void RoundRestart()
     {
+        if (p1Score > p2Score)
+        {
+            p1RoundScore += 1;
+            p1RoundPoints = p1RoundScore.ToString();
+            p1RoundText.text = p1RoundPoints;
+        }
+        else if (p1Score < p2Score)
+        {
+            p2RoundScore += 1;
+            p2RoundPoints = p2RoundScore.ToString();
+            p2RoundText.text = p2RoundPoints;
+        }
         rightGoal.score = 0;
         leftGoal.score = 0;
+        pot1.GetComponent<SpriteRenderer>().sprite = dirty00;
+        pot2.GetComponent<SpriteRenderer>().sprite = otherDirty00;
     }
 
     public void EndGame()
     {
-        Debug.Log("End Game");
-        //Insert endgame code here
+        endgameBG.SetActive(true);
+        if (p1RoundScore > p2RoundScore)
+        {
+            blueBG.SetActive(false);
+            redBG.SetActive(true);
+            victoryBlue.SetActive(false);
+            victoryRed.SetActive(true);
+            defeatBlue.SetActive(false);
+            defeatRed.SetActive(true);
+        }
+        if (p2RoundScore > p1RoundScore)
+        {
+            blueBG.SetActive(true);
+            redBG.SetActive(false);
+            victoryBlue.SetActive(true);
+            victoryRed.SetActive(false);
+            defeatBlue.SetActive(true);
+            defeatRed.SetActive(false);
+        }
     }
 }
