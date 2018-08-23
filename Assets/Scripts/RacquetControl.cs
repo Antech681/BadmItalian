@@ -55,14 +55,14 @@ public class RacquetControl : MonoBehaviour {
             switch (whichPlayer)
             {
                 case WhichPlayer.P1:
-                    if (Input.GetKey(GameplayManager.GM.p1Left))
+                    if (Input.GetKey(ControlsManager.CM.p1Left))
                     {
                         if (transform.position.x >= posXMin)
                         {
                             transform.position += new Vector3(-moveSpeed * Time.deltaTime, 0, 0);
                         }
                     }
-                    if (Input.GetKey(GameplayManager.GM.p1Right))
+                    if (Input.GetKey(ControlsManager.CM.p1Right))
                     {
                         if (transform.position.x <= posXMax)
                         {
@@ -73,14 +73,14 @@ public class RacquetControl : MonoBehaviour {
                     break;
 
                 case WhichPlayer.P2:
-                    if (Input.GetKey(GameplayManager.GM.p2Left))
+                    if (Input.GetKey(ControlsManager.CM.p2Left))
                     {
                         if (transform.position.x >= posXMin)
                         {
                             transform.position += new Vector3(-moveSpeed * Time.deltaTime, 0, 0);
                         }
                     }
-                    if (Input.GetKey(GameplayManager.GM.p2Right))
+                    if (Input.GetKey(ControlsManager.CM.p2Right))
                     {
                         if (transform.position.x <= posXMax)
                         {

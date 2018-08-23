@@ -56,15 +56,15 @@ public class SwingingScript : MonoBehaviour {
                     hitForce = hitForceMax;
                 }
                 powerSlider.value = hitForce;
-                if (Input.GetKey(GameplayManager.GM.p1SwingL))
+                if (Input.GetKey(ControlsManager.CM.p1SwingL))
                 {
                     hitForce += hitForceChargeRate * Time.deltaTime;
                 }
-                if (Input.GetKey(GameplayManager.GM.p1SwingR))
+                if (Input.GetKey(ControlsManager.CM.p1SwingR))
                 {
                     hitForce += hitForceChargeRate * Time.deltaTime;
                 }
-                if (Input.GetKeyUp(GameplayManager.GM.p1SwingL))
+                if (Input.GetKeyUp(ControlsManager.CM.p1SwingL))
                 {
                     if (transform.localPosition.y <= 0)
                     {
@@ -78,7 +78,7 @@ public class SwingingScript : MonoBehaviour {
                     sfxMan.racquetSwing.Play();
                     hitForce = startHitForce;
                 }
-                if (Input.GetKeyUp(GameplayManager.GM.p1SwingR))
+                if (Input.GetKeyUp(ControlsManager.CM.p1SwingR))
                 {
                     if (transform.localPosition.y <= 0)
                     {
@@ -100,22 +100,22 @@ public class SwingingScript : MonoBehaviour {
                     hitForce = hitForceMax;
                 }
                 powerSlider.value = hitForce;
-                if (Input.GetKey(GameplayManager.GM.p2SwingL))
+                if (Input.GetKey(ControlsManager.CM.p2SwingL))
                 {
                     hitForce += hitForceChargeRate * Time.deltaTime;
                 }
-                if (Input.GetKey(GameplayManager.GM.p2SwingR))
+                if (Input.GetKey(ControlsManager.CM.p2SwingR))
                 {
                     hitForce += hitForceChargeRate * Time.deltaTime;
                 }
-                if (Input.GetKeyUp(GameplayManager.GM.p2SwingL))
+                if (Input.GetKeyUp(ControlsManager.CM.p2SwingL))
                 {
                     //rb.AddForce(new Vector3(-hitForce, 0, 0), ForceMode.VelocityChange);
                     rb.velocity = new Vector3(-hitForce, 0);
                     sfxMan.racquetSwing.Play();
                     hitForce = startHitForce;
                 }
-                if (Input.GetKeyUp(GameplayManager.GM.p2SwingR))
+                if (Input.GetKeyUp(ControlsManager.CM.p2SwingR))
                 {
                     //rb.AddForce(new Vector3(hitForce, 0, 0), ForceMode.VelocityChange);
                     rb.velocity = new Vector3(hitForce, 0);

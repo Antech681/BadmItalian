@@ -15,42 +15,42 @@ public class ControlMenuScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         menuPanel = transform.Find("SettingsControlsTab");
-        menuPanel.gameObject.SetActive(false);
+        //menuPanel.gameObject.SetActive(false);
         waitingForKey = false;
 
         for(int i = 0; i < 8; i++)
         {
             if(menuPanel.GetChild(i).name == "P1LeftKey")
             {
-                menuPanel.GetChild(i).GetComponentInChildren<Text>().text = GameplayManager.GM.p1Left.ToString();
+                menuPanel.GetChild(i).GetComponentInChildren<Text>().text = ControlsManager.CM.p1Left.ToString();
             }
             else if (menuPanel.GetChild(i).name == "P1RightKey")
             {
-                menuPanel.GetChild(i).GetComponentInChildren<Text>().text = GameplayManager.GM.p1Right.ToString();
+                menuPanel.GetChild(i).GetComponentInChildren<Text>().text = ControlsManager.CM.p1Right.ToString();
             }
             else if (menuPanel.GetChild(i).name == "P1SwingLKey")
             {
-                menuPanel.GetChild(i).GetComponentInChildren<Text>().text = GameplayManager.GM.p1SwingL.ToString();
+                menuPanel.GetChild(i).GetComponentInChildren<Text>().text = ControlsManager.CM.p1SwingL.ToString();
             }
             else if (menuPanel.GetChild(i).name == "P1SwingRKey")
             {
-                menuPanel.GetChild(i).GetComponentInChildren<Text>().text = GameplayManager.GM.p1SwingR.ToString();
+                menuPanel.GetChild(i).GetComponentInChildren<Text>().text = ControlsManager.CM.p1SwingR.ToString();
             }
             else if (menuPanel.GetChild(i).name == "P2LeftKey")
             {
-                menuPanel.GetChild(i).GetComponentInChildren<Text>().text = GameplayManager.GM.p2Left.ToString();
+                menuPanel.GetChild(i).GetComponentInChildren<Text>().text = ControlsManager.CM.p2Left.ToString();
             }
             else if (menuPanel.GetChild(i).name == "P2RightKey")
             {
-                menuPanel.GetChild(i).GetComponentInChildren<Text>().text = GameplayManager.GM.p2Right.ToString();
+                menuPanel.GetChild(i).GetComponentInChildren<Text>().text = ControlsManager.CM.p2Right.ToString();
             }
             else if (menuPanel.GetChild(i).name == "P2SwingLKey")
             {
-                menuPanel.GetChild(i).GetComponentInChildren<Text>().text = GameplayManager.GM.p2SwingL.ToString();
+                menuPanel.GetChild(i).GetComponentInChildren<Text>().text = ControlsManager.CM.p2SwingL.ToString();
             }
             else if (menuPanel.GetChild(i).name == "P2SwingRKey")
             {
-                menuPanel.GetChild(i).GetComponentInChildren<Text>().text = GameplayManager.GM.p2SwingR.ToString();
+                menuPanel.GetChild(i).GetComponentInChildren<Text>().text = ControlsManager.CM.p2SwingR.ToString();
             }
         }
 	}
@@ -109,44 +109,44 @@ public class ControlMenuScript : MonoBehaviour {
         switch (keyName)
         {
             case "p1Left":
-                GameplayManager.GM.p1Left = newKey;
-                buttonText.text = GameplayManager.GM.p1Left.ToString();
-                PlayerPrefs.SetString("p1LeftKey", GameplayManager.GM.p1Left.ToString());
+                ControlsManager.CM.p1Left = newKey;
+                buttonText.text = ControlsManager.CM.p1Left.ToString();
+                PlayerPrefs.SetString("p1LeftKey", ControlsManager.CM.p1Left.ToString());
                 break;
             case "p1Right":
-                GameplayManager.GM.p1Right = newKey;
-                buttonText.text = GameplayManager.GM.p1Right.ToString();
-                PlayerPrefs.SetString("p1RightKey", GameplayManager.GM.p1Right.ToString());
+                ControlsManager.CM.p1Right = newKey;
+                buttonText.text = ControlsManager.CM.p1Right.ToString();
+                PlayerPrefs.SetString("p1RightKey", ControlsManager.CM.p1Right.ToString());
                 break;
             case "p1SwingL":
-                GameplayManager.GM.p1SwingL = newKey;
-                buttonText.text = GameplayManager.GM.p1SwingL.ToString();
-                PlayerPrefs.SetString("p1SwingLKey", GameplayManager.GM.p1SwingL.ToString());
+                ControlsManager.CM.p1SwingL = newKey;
+                buttonText.text = ControlsManager.CM.p1SwingL.ToString();
+                PlayerPrefs.SetString("p1SwingLKey", ControlsManager.CM.p1SwingL.ToString());
                 break;
             case "p1SwingR":
-                GameplayManager.GM.p1SwingR = newKey;
-                buttonText.text = GameplayManager.GM.p1SwingR.ToString();
-                PlayerPrefs.SetString("p1SwingRKey", GameplayManager.GM.p1SwingR.ToString());
+                ControlsManager.CM.p1SwingR = newKey;
+                buttonText.text = ControlsManager.CM.p1SwingR.ToString();
+                PlayerPrefs.SetString("p1SwingRKey", ControlsManager.CM.p1SwingR.ToString());
                 break;
             case "p2Left":
-                GameplayManager.GM.p2Left = newKey;
-                buttonText.text = GameplayManager.GM.p2Left.ToString();
-                PlayerPrefs.SetString("p2LeftKey", GameplayManager.GM.p2Left.ToString());
+                ControlsManager.CM.p2Left = newKey;
+                buttonText.text = ControlsManager.CM.p2Left.ToString();
+                PlayerPrefs.SetString("p2LeftKey", ControlsManager.CM.p2Left.ToString());
                 break;
             case "p2Right":
-                GameplayManager.GM.p2Right = newKey;
-                buttonText.text = GameplayManager.GM.p2Right.ToString();
-                PlayerPrefs.SetString("p2RightKey", GameplayManager.GM.p2Right.ToString());
+                ControlsManager.CM.p2Right = newKey;
+                buttonText.text = ControlsManager.CM.p2Right.ToString();
+                PlayerPrefs.SetString("p2RightKey", ControlsManager.CM.p2Right.ToString());
                 break;
             case "p2SwingL":
-                GameplayManager.GM.p2SwingL = newKey;
-                buttonText.text = GameplayManager.GM.p2SwingL.ToString();
-                PlayerPrefs.SetString("p2SwingLKey", GameplayManager.GM.p2SwingL.ToString());
+                ControlsManager.CM.p2SwingL = newKey;
+                buttonText.text = ControlsManager.CM.p2SwingL.ToString();
+                PlayerPrefs.SetString("p2SwingLKey", ControlsManager.CM.p2SwingL.ToString());
                 break;
             case "p2SwingR":
-                GameplayManager.GM.p1SwingR = newKey;
-                buttonText.text = GameplayManager.GM.p2SwingR.ToString();
-                PlayerPrefs.SetString("p2SwingRKey", GameplayManager.GM.p2SwingR.ToString());
+                ControlsManager.CM.p1SwingR = newKey;
+                buttonText.text = ControlsManager.CM.p2SwingR.ToString();
+                PlayerPrefs.SetString("p2SwingRKey", ControlsManager.CM.p2SwingR.ToString());
                 break;
         }
 
