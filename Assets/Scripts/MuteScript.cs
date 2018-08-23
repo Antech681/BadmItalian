@@ -9,7 +9,7 @@ public class MuteScript : MonoBehaviour {
     public VolumeManager volMan;
     public Toggle toggle;
     
-	void Start () {
+    void Start () {
         //audioSource = GetComponent<AudioSource>();
         volumeSlider = GameObject.Find("VolumeControlBar").GetComponent<Slider>();
         volMan = GameObject.Find("VolumeManager").GetComponent<VolumeManager>();

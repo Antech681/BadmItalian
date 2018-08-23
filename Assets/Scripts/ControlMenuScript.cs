@@ -14,7 +14,7 @@ public class ControlMenuScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        menuPanel = transform.Find("Panel");
+        menuPanel = transform.Find("SettingsControlsTab");
         menuPanel.gameObject.SetActive(false);
         waitingForKey = false;
 
@@ -57,7 +57,7 @@ public class ControlMenuScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.Escape) && !menuPanel.gameObject.activeSelf)
+		/*if(Input.GetKeyDown(KeyCode.Escape) && !menuPanel.gameObject.activeSelf)
         {
             menuPanel.gameObject.SetActive(true);
             Time.timeScale = 0f;
@@ -65,7 +65,7 @@ public class ControlMenuScript : MonoBehaviour {
         {
             menuPanel.gameObject.SetActive(false);
             Time.timeScale = 1f;
-        }
+        }*/
     }
 
     private void OnGUI()

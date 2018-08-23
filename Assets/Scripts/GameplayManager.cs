@@ -42,6 +42,7 @@ public class GameplayManager : MonoBehaviour {
     private int p2Score;
 
     public ServeTimer serveTimer;
+    public RoundsManager roundsMan;
 
     public int scoreCap;
     public int p1RoundScore;
@@ -93,6 +94,7 @@ public class GameplayManager : MonoBehaviour {
         sfxMan = FindObjectOfType<SFXManager>();
         roundStars1 = GameObject.Find("P1StarCount").GetComponent<RoundStars>();
         roundStars2 = GameObject.Find("P2StarCount").GetComponent<RoundStars>();
+        roundsMan = GameObject.Find("SettingsCanvas").GetComponent<RoundsManager>();
         startDirection = Random.Range(0, 2);
         whichDirection = serveHorizontal[startDirection];
         if (startDirection == 0)
@@ -103,8 +105,15 @@ public class GameplayManager : MonoBehaviour {
         {
             serveTo = 2;
         }
+        roundCap = roundsMan.pointsToWin;
+        //Invoke("Setup", 0.1f);
     }
 	
+    void Setup()
+    {
+        
+    }
+
 	// Update is called once per frame
 	void Update () {
         if (gameOn)
