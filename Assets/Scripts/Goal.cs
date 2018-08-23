@@ -25,6 +25,12 @@ public class Goal : MonoBehaviour {
     private Meatball meatballInPlay;
     public int howMuchToScore;
 
+    public RectTransform playerBar;
+    public RectTransform otherPlayerBar;
+    public float maxDirty;
+    public float currentDirty = 0;
+    private float dirty;
+
     // Use this for initialization
     void Start()
     {
@@ -44,18 +50,6 @@ public class Goal : MonoBehaviour {
             return;
         }
         howMuchToScore = meatballInPlay.scoreWorth;
-    }
-    public RectTransform playerBar;
-    public RectTransform otherPlayerBar;
-    public float maxDirty;
-    public float currentDirty = 0;
-    private float dirty;
-
-    // Use this for initialization
-    void Start () {
-        maxDirty = playerBar.sizeDelta.x;
-        playerBar.sizeDelta = new Vector2(currentDirty, playerBar.sizeDelta.y);
-        dirty = maxDirty / 6;
     }
 
     private void OnTriggerEnter (Collider other)
