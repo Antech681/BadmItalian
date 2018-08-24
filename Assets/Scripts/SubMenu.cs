@@ -8,6 +8,11 @@ public class SubMenu : MonoBehaviour
 {
     public Button resume;
 
+    private void Start()
+    {
+        resume = GameObject.Find("Continue").GetComponent<Button>();
+    }
+
     void Update()
     {
         resume.GetComponent<Button>().onClick.AddListener(ContinueScene);
