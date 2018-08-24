@@ -19,32 +19,32 @@ public class Backgrounds : MonoBehaviour
         //GetComponent<SpriteRenderer>().sprite = currentPlayer1;
         if (Kitchen2.arenaSelected == 1)
         {
-            kitchenBench.transform.position = new Vector3(0, -3.61f, 0);
+            kitchenBench.transform.position = new Vector3(0, -5.25f, 0);
             GetComponent<SpriteRenderer>().sprite = currentKitchen1;
         }
         if (Kitchen2.arenaSelected == 2)
         {
-            kitchenBench.transform.position = new Vector3(0, -3.61f, 0);
+            kitchenBench.transform.position = new Vector3(0, -5.25f, 0);
             GetComponent<SpriteRenderer>().sprite = currentKitchen2;
         }
         if (Kitchen2.arenaSelected == 3)
         {
-            kitchenBench.transform.position = new Vector3(0, -3.61f, 0);
+            kitchenBench.transform.position = new Vector3(0, -5.25f, 0);
             GetComponent<SpriteRenderer>().sprite = currentKitchen3;
         }
         if (Kitchen2.arenaSelected == 4)
         {
-            kitchenBench.transform.position = new Vector3(0, -3.61f, 0);
+            kitchenBench.transform.position = new Vector3(0, -5.25f, 0);
             GetComponent<SpriteRenderer>().sprite = currentKitchen4;
         }
         if (Kitchen2.arenaSelected == 5)
         {
-            kitchenBench.transform.position = new Vector3(0, -2.81f, 0);
+            kitchenBench.transform.position = new Vector3(0, -4.38f, 0);
             GetComponent<SpriteRenderer>().sprite = currentKitchen5;
         }
         if (Kitchen2.arenaSelected == 6)
         {
-            kitchenBench.transform.position = new Vector3(0, -3.61f, 0);
+            kitchenBench.transform.position = new Vector3(0, -5.25f, 0);
             GetComponent<SpriteRenderer>().sprite = currentKitchen6;
         }
     }
