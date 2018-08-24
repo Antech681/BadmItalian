@@ -75,8 +75,8 @@ public class Meatball : MonoBehaviour {
 
                 if (timer <= 0)
                 {
-                    //LaunchBall();
-                    ladle.serving = true;
+                    LaunchBall();
+                    //ladle.serving = true;
                 }
             }
 

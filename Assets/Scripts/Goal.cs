@@ -35,6 +35,7 @@ public class Goal : MonoBehaviour {
     void Start()
     {
         maxDirty = playerBar.sizeDelta.x;
+        //maxDirty = 395;
         playerBar.sizeDelta = new Vector2(currentDirty, playerBar.sizeDelta.y);
         dirty = maxDirty / 6;
         gameManager = FindObjectOfType<GameplayManager>();

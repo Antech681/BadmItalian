@@ -35,10 +35,10 @@ public class GameplayManager : MonoBehaviour {
     public Goal leftGoal; // ADD
     public Goal rightGoal; // ADD
 
-    public Text p1ScoreText; // ADD
-    public Text p2ScoreText; // ADD
-    private string p1ScoreString;
-    private string p2ScoreString;
+    //public Text p1ScoreText; // ADD
+    //public Text p2ScoreText; // ADD
+    //private string p1ScoreString;
+    //private string p2ScoreString;
 
     private int p1Score;
     private int p2Score;
@@ -51,8 +51,8 @@ public class GameplayManager : MonoBehaviour {
     public int p2RoundScore;
     public string p1RoundPoints;
     public string p2RoundPoints;
-    public Text p1RoundText; // ADD
-    public Text p2RoundText; // ADD
+    //public Text p1RoundText; // ADD
+    //public Text p2RoundText; // ADD
     public int roundCap;
 
     public GameObject blueBG;
@@ -123,7 +123,7 @@ public class GameplayManager : MonoBehaviour {
         pot2 = GameObject.Find("Pot 2");
         leftGoal = GameObject.Find("Goal Left").GetComponent<Goal>();
         rightGoal = GameObject.Find("Goal Right").GetComponent<Goal>();
-        serveTimer = GameObject.Find("Text").GetComponent<ServeTimer>();
+        serveTimer = GameObject.Find("ServeText").GetComponent<ServeTimer>();
 
         endgameBG = GameObject.Find("Win/Loss");
         blueBG = GameObject.Find("Background Blue");
@@ -148,8 +148,8 @@ public class GameplayManager : MonoBehaviour {
             p1Score = rightGoal.score;
             p2Score = leftGoal.score;
 
-            p1ScoreString = p1Score.ToString();
-            p2ScoreString = p2Score.ToString();
+            //p1ScoreString = p1Score.ToString();
+            //p2ScoreString = p2Score.ToString();
 
             //p1ScoreText.text = p1ScoreString;
             //p2ScoreText.text = p2ScoreString;
@@ -243,13 +243,13 @@ public class GameplayManager : MonoBehaviour {
         {
             p1RoundScore += 1;
             p1RoundPoints = p1RoundScore.ToString();
-            p1RoundText.text = p1RoundPoints;
+            //p1RoundText.text = p1RoundPoints;
         }
         else if (p1Score < p2Score)
         {
             p2RoundScore += 1;
             p2RoundPoints = p2RoundScore.ToString();
-            p2RoundText.text = p2RoundPoints;
+            //p2RoundText.text = p2RoundPoints;
         }
         rightGoal.score = 0;
         leftGoal.score = 0;
