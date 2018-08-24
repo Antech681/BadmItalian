@@ -6,6 +6,7 @@ public class BackToMenu : MonoBehaviour {
 
     public Canvas mainMenu;
     public Canvas settings;
+    public Canvas credits;
 
 	// Use this for initialization
 	void Start () {
@@ -21,5 +22,6 @@ public class BackToMenu : MonoBehaviour {
     {
         mainMenu.gameObject.SetActive(true);
         settings.gameObject.SetActive(false);
+        credits.gameObject.SetActive(false);
     }
 }

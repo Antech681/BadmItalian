@@ -13,6 +13,10 @@ public class MainMenu : MonoBehaviour {
     public Button credits;
     public Button quit;
 
+    public Canvas settingsCanvas;
+    public Canvas mainCanvas;
+    public Canvas creditsCanvas;
+
     void Start()
     {
         play.GetComponent<Button>().interactable = true;
@@ -21,6 +25,8 @@ public class MainMenu : MonoBehaviour {
         quit.GetComponent<Button>().interactable = false;
         Button btn = dial.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
+        settingsCanvas.gameObject.SetActive(false);
+        creditsCanvas.gameObject.SetActive(false);
     }
 
     void Update()
@@ -59,10 +65,23 @@ public class MainMenu : MonoBehaviour {
     void PlayScene()
     {
         SceneManager.LoadScene("Controls");
+        play.interactable = false;
     }
 
     void QuitScene()
     {
         Application.Quit();
+    }
+
+    public void ActivateSettings()
+    {
+        settingsCanvas.gameObject.SetActive(true);
+        mainCanvas.gameObject.SetActive(false);
+    }
+
+    public void ActivateCredits()
+    {
+        creditsCanvas.gameObject.SetActive(true);
+        mainCanvas.gameObject.SetActive(false);
     }
 }
