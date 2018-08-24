@@ -11,9 +11,9 @@ public class MuteScript : MonoBehaviour {
     
     void Start () {
         //audioSource = GetComponent<AudioSource>();
-        volumeSlider = GameObject.Find("VolumeControlBar").GetComponent<Slider>();
-        volMan = GameObject.Find("VolumeManager").GetComponent<VolumeManager>();
-        toggle = GameObject.Find("Mute").GetComponent<Toggle>();
+        //volumeSlider = GameObject.Find("VolumeControlBar").GetComponent<Slider>();
+        //volMan = GameObject.Find("VolumeManager").GetComponent<VolumeManager>();
+        //toggle = GameObject.Find("Mute").GetComponent<Toggle>();
 	}
 	
 	void Update () {
