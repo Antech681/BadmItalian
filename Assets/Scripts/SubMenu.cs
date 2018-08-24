@@ -13,7 +13,7 @@ public class SubMenu : MonoBehaviour
         resume.GetComponent<Button>().onClick.AddListener(ContinueScene);
     }
 
-    void ContinueScene()
+    public void ContinueScene()
     {
         SceneManager.LoadScene("Player Select");
     }
